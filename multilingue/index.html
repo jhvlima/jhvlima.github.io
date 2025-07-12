@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="page_title">João Henrique Lima - Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Botões de Idioma -->
+        <div class="language-switcher">
+            <button onclick="setLanguage('pt')">🇧🇷 Português</button>
+            <button onclick="setLanguage('en')">🇬🇧 English</button>
+            <button onclick="setLanguage('ja')">🇯🇵 日本語</button>
+        </div>
+
+        <header class="profile">
+            <img src="https://github.com/jhvlima.png" alt="Foto de perfil de João Henrique" class="profile-pic">
+            <div class="profile-info">
+                <h1 data-key="profile_name">João Henrique Lima</h1>
+                <p data-key="profile_title">Estudante de Ciência da Computação na <strong>Universidade Federal do Espírito Santo (UFES)</strong></p>
+                <p class="bio" data-key="profile_bio">
+                    Fascinado pela área de Processamento de Linguagem Natural e desenvolvimento de jogos. Atualmente envolvido em projetos de pesquisa acadêmica, na empresa júnior e no GameLab da universidade.
+                </p>
+            </div>
+        </header>
+
+        <main>
+            <section id="projects">
+                <h2 data-key="projects_title">Projetos Principais</h2>
+
+                <div class="project-card">
+                    <h3 data-key="project1_title">Iniciação Científica: API para Reconhecimento de Entidades Químicas</h3>
+                    <p class="project-description" data-key="project1_desc">
+                        Desenvolvimento de uma API para otimizar o Reconhecimento de Entidades Nomeadas (REN) em textos do domínio químico, combinando Gramáticas Locais e métodos híbridos (CRF).
+                    </p>
+                    <div class="tags">
+                        <span data-key="tag_nlp">Processamento de Linguagem Natural</span>
+                        <span>Shell Script</span>
+                        <span>Makefile</span>
+                        <span>API</span>
+                    </div>
+                    <details class="details-section">
+                        <summary data-key="details1_summary">Ver resumo completo do artigo</summary>
+                        <div class="details-content">
+                            <p><strong data-key="details_abstract_title">Resumo:</strong> <span data-key="details1_abstract_content">O Reconhecimento de Entidades Nomeadas (REN), é fundamental para atividades que envolvem processamento de texto e extração de informações...</span></p>
+                            <p><strong data-key="details_keywords_title">Palavras-chave:</strong> <span data-key="details1_keywords">Gramáticas Locais, Reconhecimento de Entidades Nomeadas, Processamento de Linguagem Natural, Entidades Químicas.</span></p>
+                            <p><strong data-key="details_link_title">Link da Publicação:</strong> 
+                                <a href="https://www.inicepg.univap.br/cd/INIC_2024/anais/arquivos/RE_1100_1072_01.pdf" target="_blank" data-key="details1_link_text">Acessar Publicação (INIC 2024)</a>
+                            </p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="project-card">
+                    <h3 data-key="project2_title">CT Junior</h3>
+                    <p class="status" data-key="status_ongoing">Em andamento</p>
+                    <p class="project-description" data-key="project2_desc">
+                        Atuo como Consultor de Projetos, com foco no desenvolvimento de soluções web. Minha experiência inclui a criação de interfaces com React.js e a construção de APIs robustas com Nest.js.
+                    </p>
+                    <div class="tags">
+                        <span>React.js</span>
+                        <span>Nest.js</span>
+                        <span data-key="tag_softeng">Engenharia de Software</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3 data-key="project3_title">UFES GameLab</h3>
+                    <p class="status" data-key="status_ongoing">Em andamento</p>
+                    <p class="project-description" data-key="project3_desc">
+                        Criação de experiências e jogos interativos na plataforma Roblox, utilizando Luau para a lógica de jogo. Realizo também a modelagem de assets 3D básicos com o Blender.
+                    </p>
+                    <div class="tags">
+                        <span>Roblox Studio</span>
+                        <span>Luau</span>
+                        <span>Blender</span>
+                        <span data-key="tag_gamedev">Desenvolvimento de Jogos</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="columns">
+                <section id="education">
+                    <h2 data-key="education_title">Formação</h2>
+                    <h3 data-key="education_course">Ciência da Computação</h3>
+                    <p data-key="education_university">Universidade Federal do Espírito Santo (UFES)</p>
+                    <p><strong data-key="education_highlights_title">Disciplinas de Destaque:</strong> <span data-key="education_highlights_list">Inteligência Artificial, Compiladores, Teoria dos Grafos, Programação Orientada a Objetos.</span></p>
+                    <details class="details-section">
+                        <summary data-key="education_details_summary">Ver todas as disciplinas cursadas</summary>
+                        <div class="details-content" data-key="education_details_content">
+                            <!-- O conteúdo desta div será preenchido pelo JavaScript -->
+                        </div>
+                    </details>
+                </section>
+                
+                <section id="skills">
+                    <h2 data-key="skills_title">Ambiente de Desenvolvimento</h2>
+                    <p><strong data-key="skills_languages_title">Linguagens:</strong></p>
+                    <div class="tags"><span>C/C++</span><span>Java</span><span>Shell Script</span><span>Swift UI</span><span>Luau</span></div>
+                    <p><strong data-key="skills_frameworks_title">Frameworks e Bibliotecas:</strong></p>
+                    <div class="tags"><span>React.js</span><span>Nest.js</span></div>
+                    <p><strong data-key="skills_tools_title">Ferramentas e Editores:</strong></p>
+                    <div class="tags"><span>VS Code</span><span>Nano</span><span>Git</span><span>Blender</span><span>Roblox Studio</span></div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <h2 data-key="links_title">Links</h2>
+            <div class="links">
+                <a href="https://github.com/jhvlima" target="_blank">GitHub</a>
+                <a href="https://leetcode.com/jhvlima/" target="_blank">LeetCode</a>
+                <a href="http://lattes.cnpq.br/6864773005774963" target="_blank">Lattes</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts no final do body para melhor performance -->
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

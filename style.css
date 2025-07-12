@@ -1,0 +1,164 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tradutor */
+.language-switcher {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.language-switcher button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.language-switcher button:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.container {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+h2 {
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Header e Perfil */
+.profile {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #3498db;
+    margin-right: 30px;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.profile-info .bio {
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+/* Seções Principais */
+main section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+/* Projetos */
+.project-card {
+    border-left: 4px solid #3498db;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-card .status {
+    display: inline-block;
+    background-color: #e67e22;
+    color: #fff;
+    padding: 3px 10px;
+    font-size: 0.8em;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-weight: 300;
+}
+
+/* Colunas para Educação e Habilidades */
+.columns {
+    display: flex;
+    gap: 30px;
+}
+
+.columns > section {
+    flex: 1;
+}
+
+/* Tags de Habilidades e Tecnologias */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tags span {
+    background-color: #ecf0f1;
+    color: #34495e;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.links a {
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #2980b9;
+}
