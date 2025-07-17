@@ -3,6 +3,8 @@ const translations = {
     en: {
         page_title: "João Henrique Lima - Portfolio",
         profile_name: "João Henrique Lima",
+        warning_title: "Translation Notice",
+        warning_text: "This is an automated translation and has not yet been professionally reviewed neither complete.",
         profile_title: "Computer Science Student at <strong>Federal University of Espírito Santo (UFES)</strong>",
         profile_bio: "Fascinated by Natural Language Processing and game development. Currently involved in academic research, the junior enterprise, and the university's GameLab.",
         projects_title: "Main Projects",
@@ -48,6 +50,8 @@ const translations = {
     ja: {
         page_title: "ジョアン・エンリケ・リマ - ポートフォリオ",
         profile_name: "ジョアン・エンリケ・リマ",
+        warning_title: "翻訳に関するお知らせ",
+        warning_text: "これは自動翻訳であり、まだ専門家によるレビューを受けておらず、不完全な場合があります。",
         profile_title: "<strong>エスピリトサント連邦大学 (UFES)</strong> のコンピュータサイエンス学生",
         profile_bio: "自然言語処理とゲーム開発の分野に魅了されています。現在、学術研究、ジュニアエンタープライズ、大学のゲームラボに参加しています。",
         projects_title: "主なプロジェクト",

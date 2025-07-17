@@ -9,6 +9,10 @@ body {
 }
 
 /* Tradutor */
+#translation-warning {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
 .language-switcher {
     text-align: right;
     margin-bottom: 20px;
@@ -27,7 +31,7 @@ body {
 
 .language-switcher button:hover {
     background-color: #f0f0f0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .container {
@@ -36,7 +40,9 @@ body {
     padding: 20px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 700;
     color: #2c3e50;
 }
@@ -54,7 +60,7 @@ h2 {
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     margin-bottom: 40px;
 }
 
@@ -86,7 +92,7 @@ main section {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
 }
 
@@ -121,7 +127,7 @@ main section {
     gap: 30px;
 }
 
-.columns > section {
+.columns>section {
     flex: 1;
 }
 
