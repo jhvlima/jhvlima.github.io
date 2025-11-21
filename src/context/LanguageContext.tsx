@@ -3,6 +3,9 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { translations, Language } from '@/data/translations';
 
+// 1. Definimos um tipo para as chaves de tradução baseado no inglês (que é completo)
+type TranslationKey = keyof typeof translations['en'];
+
 type LanguageContextType = {
   lang: Language;
   setLang: (lang: Language) => void;
@@ -15,7 +18,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Language>('pt');
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Carrega do LocalStorage ao iniciar (efeito do script.js antigo)
   useEffect(() => {
     const saved = localStorage.getItem('language') as Language;
     if (saved && ['pt', 'en', 'ja'].includes(saved)) {
@@ -30,11 +32,15 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     document.documentElement.lang = newLang;
   };
 
+  // 2. Atualizamos a função 't' para lidar com a tipagem
   const t = (key: string) => {
-    return translations[lang][key] || key;
+    // Aqui fazemos um Type Assertion (as any) para dizer ao TS:
+    // "Eu sei que estou acessando dinamicamente, se não achar, retorna a chave."
+    // Essa é a forma segura de corrigir o erro de build rápido.
+    const currentTranslations = translations[lang] as any;
+    return currentTranslations[key] || key;
   };
 
-  // Evita "hydration mismatch" (piscar texto errado antes de carregar)
   if (!isLoaded) return <div className="p-10 text-center">Loading...</div>;
 
   return (
