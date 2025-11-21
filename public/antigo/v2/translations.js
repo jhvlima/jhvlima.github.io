@@ -1,19 +1,19 @@
 const translations = {
     // English Translations
     en: {
-        page_title: "João Henrique Lima - Portfolio",
-        profile_name: "João Henrique Lima",
+        page_title: "João Henrique Valbusa Lima - Portfolio",
+        profile_name: "João Henrique Valbusa Lima",
         warning_title: "Translation Notice",
         warning_text: "This is an automated translation and has not yet been professionally reviewed neither complete.",
         profile_title: "Computer Science Student at <strong>Federal University of Espírito Santo (UFES)</strong>",
-        profile_bio: "Fascinated by Natural Language Processing and game development. Currently involved in academic research, the junior enterprise, and the university's GameLab.",
+        profile_bio: "Fascinated by Natural Language Processing and game development. Currently involved in academic research projects, the junior enterprise, and the university's GameLab.",
         projects_title: "Main Projects",
         project1_title: "Scientific Initiation: API for Chemical Entity Recognition",
         project1_desc: "Development of an API to optimize Named Entity Recognition (NER) in texts from the chemical domain, combining Local Grammars and hybrid methods (CRF).",
         tag_nlp: "Natural Language Processing",
         details1_summary: "View full article abstract",
         details_abstract_title: "Abstract:",
-        details1_abstract_content: "Named Entity Recognition (NER) is fundamental for activities involving text processing and information extraction...",
+        details1_abstract_content: "Named Entity Recognition (NER) is fundamental for activities involving text processing and information extraction. This work has two objectives: to improve the existing Local Grammars (LGs) for chemical Named Entity Recognition (NER), making them more comprehensive; and to build an Application Programming Interface (API) capable of receiving an input file, running the scripts that apply both the LGs and the hybrid Conditional Random Fields (CRF) and LG method, and returning a file with the processed text and annotated named entities. The methodology includes a linguistic study of the chemical domain, a study of existing LGs for chemical entities, and modifications to the LGs. The API was developed using Shell Script and Makefile and has undergone functional testing. The next steps of the project involve expanding and refining the rules in the LGs to achieve greater precision and coverage in recognizing chemical entities, as well as making the API available through a web interface.",
         details_keywords_title: "Keywords:",
         details1_keywords: "Local Grammars, Named Entity Recognition, Natural Language Processing, Chemical Entities.",
         details_link_title: "Publication Link:",
@@ -37,8 +37,12 @@ const translations = {
                 <li><strong>2nd Semester ✅:</strong> Programming II, Calculus II, Linear Algebra, Digital Logic Elements, Logic for Computing I.</li>
                 <li><strong>3rd Semester ✅:</strong> Data Structures, Probability and Statistics, Computer Architecture and Organization, Calculus IV.</li>
                 <li><strong>4th Semester ✅:</strong> Sorting and Searching Techniques, Operating Systems, Object-Oriented Programming, Formal Languages and Automata, Graph Theory.</li>
-                <li><strong>5th Semester ⏳:</strong> Numerical Algorithms, Software Engineering I, Computer Networks, Logic for Computing II, Integrated Project I.</li>
-                <li>...and so on for the other semesters...</li>
+                <li><strong>5th Semester ✅:</strong> Numerical Algorithms, Software Engineering I, Computer Networks, Logic for Computing II, Integrated Project I.</li>
+                <li><strong>6th Semester ⏳:</strong> Computing and Society, Software Engineering II, Programming Paradigms, Theory of Computation.</li>
+                <li><strong>7th Semester ⏳:</strong> Database I, Compilers, Artificial Intelligence, Algorithm Design and Analysis.</li>
+                <li><strong>8th Semester ⏳:</strong> Scientific Research Methodology.</li>
+                <li><strong>9th Semester ⏳:</strong> Final Project I.</li>
+                <li><strong>10th Semester ⏳:</strong> Final Project II.</li>
             </ul>`,
         skills_title: "Development Environment",
         skills_languages_title: "Languages:",
@@ -48,19 +52,19 @@ const translations = {
     },
     // Japanese Translations
     ja: {
-        page_title: "ジョアン・エンリケ・リマ - ポートフォリオ",
-        profile_name: "ジョアン・エンリケ・リマ",
+        page_title: "ジョアン・エンリケ・ヴァルブサ・リマ - ポートフォリオ",
+        profile_name: "ジョアン・エンリケ・ヴァルブサ・リマ",
         warning_title: "翻訳に関するお知らせ",
         warning_text: "これは自動翻訳であり、まだ専門家によるレビューを受けておらず、不完全な場合があります。",
         profile_title: "<strong>エスピリトサント連邦大学 (UFES)</strong> のコンピュータサイエンス学生",
-        profile_bio: "自然言語処理とゲーム開発の分野に魅了されています。現在、学術研究、ジュニアエンタープライズ、大学のゲームラボに参加しています。",
+        profile_bio: "自然言語処理とゲーム開発の分野に魅了されています。現在、学術研究プロジェクト、ジュニアエンタープライズ、大学のゲームラボに参加しています。",
         projects_title: "主なプロジェクト",
         project1_title: "科学的開始：化学物質エンティティ認識のためのAPI",
         project1_desc: "化学分野のテキストにおける名前付きエンティティ認識（NER）を最適化するためのAPIの開発。局所文法とハイブリッド手法（CRF）を組み合わせています。",
         tag_nlp: "自然言語処理",
         details1_summary: "論文の要旨全体を見る",
         details_abstract_title: "要旨:",
-        details1_abstract_content: "名前付きエンティティ認識（NER）は、テキスト処理と情報抽出を含む活動の基本です...",
+        details1_abstract_content: "名前付きエンティティ認識（NER）は、テキスト処理と情報抽出を含む活動の基本です。この研究には2つの目的があります。既存の化学分野の名前付きエンティティ認識（NER）のための局所文法（LG）を改善し、より包括的にすること、そして、入力ファイルを受け取り、LGとハイブリッドな条件付き確率場（CRF）およびLGの両方を適用するスクリプトを実行し、処理されたテキストと注釈付きの名前付きエンティティを含むファイルを返すことができるアプリケーションプログラミングインターフェース（API）を構築することです。方法論には、化学ドメインの言語学的研究、化学エンティティに関する既存のLGの研究、およびLGの変更が含まれます。APIはシェルスクリプトとMakefileを使用して開発され、機能テストが行われました。プロジェクトの次のステップでは、化学エンティティの認識における精度と網羅性を高めるためにLG内のルールを拡張および改良し、APIをWebインターフェース経由で利用可能にすることを目指します。",
         details_keywords_title: "キーワード:",
         details1_keywords: "局所文法, 名前付きエンティティ認識, 自然言語処理, 化学エンティティ.",
         details_link_title: "出版物リンク:",
@@ -82,7 +86,14 @@ const translations = {
             <ul>
                 <li><strong>1学期 ✅:</strong> プログラミングI, 微積分I, 計算理論の基礎, コンピュータサイエンス入門.</li>
                 <li><strong>2学期 ✅:</strong> プログラミングII, 微積分II, 線形代数, デジタル論理素子, 計算論理I.</li>
-                <li>...</li>
+                <li><strong>3学期 ✅:</strong> データ構造, 確率と統計, コンピュータアーキテクチャと構成, 微積分IV.</li>
+                <li><strong>4学期 ✅:</strong> ソートと検索の技法, オペレーティングシステム, オブジェクト指向プログラミング, 形式言語とオートマトン, グラフ理論.</li>
+                <li><strong>5学期 ✅:</strong> 数値アルゴリズム, ソフトウェア工学I, コンピュータネットワーク, 計算論理II, 統合プロジェクトI.</li>
+                <li><strong>6学期 ⏳:</strong> コンピュータと社会, ソフトウェア工学II, プログラミングパラダイム, 計算理論.</li>
+                <li><strong>7学期 ⏳:</strong> データベースI, コンパイラ, 人工知能, アルゴリズムの設計と分析.</li>
+                <li><strong>8学期 ⏳:</strong> 科学研究方法論.</li>
+                <li><strong>9学期 ⏳:</strong> 卒業研究I.</li>
+                <li><strong>10学期 ⏳:</strong> 卒業研究II.</li>
             </ul>`,
         skills_title: "開発環境",
         skills_languages_title: "言語:",
@@ -92,8 +103,8 @@ const translations = {
     },
     // Portuguese Translations
     pt: {
-        page_title: "João Henrique Lima - Portfólio",
-        profile_name: "João Henrique Lima",
+        page_title: "João Henrique Valbusa Lima - Portfólio",
+        profile_name: "João Henrique Valbusa Lima",
         profile_title: "Estudante de Ciência da Computação na <strong>Universidade Federal do Espírito Santo (UFES)</strong>",
         profile_bio: "Fascinado pela área de Processamento de Linguagem Natural e desenvolvimento de jogos. Atualmente envolvido em projetos de pesquisa acadêmica, na empresa júnior e no GameLab da universidade.",
         projects_title: "Projetos Principais",
@@ -102,7 +113,7 @@ const translations = {
         tag_nlp: "Processamento de Linguagem Natural",
         details1_summary: "Ver resumo completo do artigo",
         details_abstract_title: "Resumo:",
-        details1_abstract_content: "O Reconhecimento de Entidades Nomeadas (REN), é fundamental para atividades que envolvem processamento de texto e extração de informações. Este trabalho tem 2 objetivos: melhorar as Gramáticas Locais (GLs) existentes para o Reconhecimento de Entidades Nomeadas (REN) químicas, tornando-as mais abrangentes; e construir uma Application Programing Interface (API) que seja capaz de receber um arquivo de entrada, executar os scripts que aplicam tanto as GLs quanto o método híbrido Conditional Random Fields (CRF) e GL, e retornar um arquivo com o texto processado e com as entidades nomeadas anotadas...",
+        details1_abstract_content: "O Reconhecimento de Entidades Nomeadas (REN), é fundamental para atividades que envolvem processamento de texto e extração de informações. Este trabalho tem 2 objetivos: melhorar as Gramáticas Locais (GLs) existentes para o Reconhecimento de Entidades Nomeadas (REN) químicas, tornando-as mais abrangentes; e construir uma Application Programing Interface (API) que seja capaz de receber um arquivo de entrada, executar os scripts que aplicam tanto as GLs quanto o método híbrido Conditional Random Fields(CRF) e GL, e retornar um arquivo com o texto processado e com as entidades nomeadas anotadas. A metodologia inclui um estudo linguístico do domínio químico, estudo das GLs existentes para entidades químicas e alterações nas GLs. A API foi desenvolvida utilizando Shell Script e Makefile e foi submetida a testes funcionais. Os próximos passos do projeto envolvem a ampliação e refinamento das regras presentes nas GLs, visando maior precisão e abrangência no reconhecimento das entidades químicas, além da disponibilização da API por meio de uma interface web.",
         details_keywords_title: "Palavras-chave:",
         details1_keywords: "Gramáticas Locais, Reconhecimento de Entidades Nomeadas, Processamento de Linguagem Natural, Entidades Químicas.",
         details_link_title: "Link da Publicação:",
@@ -126,7 +137,7 @@ const translations = {
                 <li><strong>2° Período ✅:</strong> Programação II, Cálculo II, Álgebra Linear, Elementos de Lógica Digital, Lógica para Computação I.</li>
                 <li><strong>3° Período ✅:</strong> Estrutura de Dados, Probabilidade e Estatística, Arquitetura e Organização de Computadores, Cálculo IV.</li>
                 <li><strong>4° Período ✅:</strong> Técnicas de Busca e Ordenação, Sistemas Operacionais, Programação Orientada a Objetos, Linguagens Formais e Autômatos, Teoria dos Grafos.</li>
-                <li><strong>5° Período ⏳:</strong> Algoritmos Numéricos, Engenharia de Software I, Redes de Computadores, Lógica para Computação II, Projeto Integrado I.</li>
+                <li><strong>5° Período ✅:</strong> Algoritmos Numéricos, Engenharia de Software I, Redes de Computadores, Lógica para Computação II, Projeto Integrado I.</li>
                 <li><strong>6° Período ⏳:</strong> Computação e Sociedade, Engenharia de Software II, Paradigmas de Programação, Teoria da Computação.</li>
                 <li><strong>7° Período ⏳:</strong> Banco de Dados I, Compiladores, Inteligência Artificial, Projeto e Análise de Algoritmos.</li>
                 <li><strong>8° Período ⏳:</strong> Metodologia de Pesquisa Científica.</li>

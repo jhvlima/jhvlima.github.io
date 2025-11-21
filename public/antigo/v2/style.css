@@ -9,8 +9,13 @@ body {
 }
 
 /* Tradutor */
-#translation-warning {
+#translation-toast {
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .language-switcher {

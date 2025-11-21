@@ -16,11 +16,13 @@
     <div class="container">
         <!-- Botões de Idioma -->
         <div class="language-switcher">
-            <button id="lang-pt-btn" onclick="setLanguage('pt')">🇧🇷 Português</button>
-            <button id="lang-en-btn" onclick="alert(translations['en']['warning_text']); setLanguage('en')">🇬🇧
-                English</button>
-            <button id="lang-ja-btn" onclick="alert(translations['ja']['warning_text']); setLanguage('ja')">🇯🇵
-                日本語</button>
+            <button id="lang-pt-btn">🇧🇷 Português</button>
+            <button id="lang-en-btn">🇬🇧 English</button>
+            <button id="lang-ja-btn">🇯🇵 日本語</button>
+        </div>
+
+        <div id="translation-toast" class="hidden">
+            ⚠️ Warning: This is an automated translation.
         </div>
 
         <header class="profile">
@@ -99,6 +101,14 @@
                         <span data-key="tag_gamedev">Desenvolvimento de Jogos</span>
                     </div>
                 </div>
+
+                <div class="text-center mt-8">
+                    <a href="projetos.html"
+                        class="inline-block bg-sky-500 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-sky-600 transition-transform transform hover:scale-105"
+                        data-key="see_all_projects_btn">
+                        Ver Todos os Projetos
+                    </a>
+                </div>
             </section>
 
             <div class="columns">
@@ -138,7 +148,6 @@
                 <a href="https://www.linkedin.com/in/jhvlima/" target="_blank">LinkedIn</a>
                 <a href="https://github.com/jhvlima" target="_blank">GitHub</a>
                 <a href="http://lattes.cnpq.br/6864773005774963" target="_blank">Lattes</a>
-                <a href="https://leetcode.com/jhvlima/" target="_blank">LeetCode</a>
             </div>
         </footer>
     </div>
