@@ -6,6 +6,7 @@ export interface Project {
   tags: { text?: string; key?: string }[]; // Pode ser texto fixo ou chave de tradução
   statusKey?: string;
   link?: string;
+  linkTitleKey?: string;
 }
 
 export const projectsData: Project[] = [
@@ -19,7 +20,8 @@ export const projectsData: Project[] = [
       { text: "Makefile" }, 
       { text: "API" }
     ],
-    link: "https://www.inicepg.univap.br/cd/INIC_2024/anais/arquivos/RE_1100_1072_01.pdf"
+    link: "https://www.inicepg.univap.br/cd/INIC_2024/anais/arquivos/RE_1100_1072_01.pdf",
+    linkTitleKey: "project1_link_title"
   },
   {
     id: "ct",
@@ -43,5 +45,17 @@ export const projectsData: Project[] = [
       { text: "Blender" }, 
       { key: "tag_gamedev" }
     ]
+  },
+  {
+    id: "mini_projects",
+    titleKey: "project4_title",
+    descKey: "project4_desc",
+    tags: [
+      { text: "Git" }, 
+      { text: "Linux" }, 
+      { text: "GitHub" }, 
+    ],
+    link: "/vitrine",
+    linkTitleKey: "project4_link_title"
   }
 ];

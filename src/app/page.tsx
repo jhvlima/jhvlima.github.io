@@ -4,19 +4,14 @@ import { projectsData } from '@/data/projects';
 import ProjectCard from '@/components/ProjectCard';
 import EducationCard from '@/components/EducationCard';
 import SkillsCard from '@/components/SkillsCard';
-import LanguageSwitcher from '@/components/LanguageSwitcher';
+import ContactSection from '@/components/ContactSection';
 
 // Componente interno para usar o Hook useLanguage
 export default function Home() {
-  const { t, setLang, lang } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <div className="max-w-4xl mx-auto p-6 font-sans">
-
-      {/* Barra Superior com Switcher */}
-      <div className="text-right mb-8 flex justify-end">
-        <LanguageSwitcher />
-      </div>
 
       {/* Header / Profile */}
       <header className="flex flex-col md:flex-row items-center bg-white p-8 rounded-lg shadow-sm mb-10">
@@ -33,44 +28,47 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Projects Section */}
-      <main className="space-y-12">
-        <h2 className="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-6">
-          {t('projects_title')}
-        </h2>
+      <div className="space-y-12">
 
-        <div>
-          {projectsData.map(proj => (
-            <ProjectCard key={proj.id} project={proj} />
-          ))}
-        </div>
-
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Coluna da Esquerda: Formação */}
+        {/* Seção de Projetos */}
+        <section id="projects" className="scroll-mt-24">
+          <h2 className="text-2xl font-bold text-gray-800 border-b-2 border-blue-500 pb-2 mb-6">
+            {t('projects_title')}
+          </h2>
           <div>
-            <EducationCard />
-          </div>
-
-          {/* Coluna da Direita: Skills */}
-          <div>
-            <SkillsCard />
+            {projectsData.map(proj => (
+              <ProjectCard key={proj.id} project={proj} />
+            ))}
           </div>
         </section>
 
-      </main>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Seção de Educação */}
+          <div id="education" className="scroll-mt-24">
+            <EducationCard />
+          </div>
+
+          {/* Seção de Skills */}
+          <div id="skills" className="scroll-mt-24">
+            <SkillsCard />
+          </div>
+        </div>
+
+          {/* Seção de Contato */}
+          <div id="contacts" className="scroll-mt-24">
+            <ContactSection />
+          </div>
+          
+      </div>
 
       {/* Footer */}
-      <footer className="text-center mt-12 py-6 border-t border-gray-200">
-        <div className="space-x-4 mb-4">
-          <a href="https://github.com/jhvlima" target="_blank" className="text-blue-500 hover:underline">GitHub</a>
-          <a href="https://www.linkedin.com/in/jhvlima/" target="_blank" className="text-blue-500 hover:underline">LinkedIn</a>
-          <a href="http://lattes.cnpq.br/6864773005774963" target="_blank" className="text-blue-500 hover:underline">Lattes</a>
-        </div>
-        <p className="text-sm text-gray-400">
-          <a href="/antigo/v2/index.html" className="hover:text-blue-500 transition-colors">
+      <footer className="text-center mt-12 py-8 border-t border-gray-200 text-sm text-gray-400">
+        <div className="mb-2">
+          <a href="/antigo/v2/index.html" className="hover:text-blue-500 transition-colors inline-flex items-center gap-1">
             ⌛ {t('link_old_version')}
           </a>
-        </p>
+        </div>
+        <p>© {new Date().getFullYear()} João Henrique Valbusa Lima</p>
       </footer>
     </div>
   );

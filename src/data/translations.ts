@@ -27,8 +27,7 @@ export const translations = {
         details1_abstract_content: "Named Entity Recognition (NER) is fundamental for activities involving text processing and information extraction. This work has two objectives: to improve the existing Local Grammars (LGs) for chemical Named Entity Recognition (NER), making them more comprehensive; and to build an Application Programming Interface (API) capable of receiving an input file, running the scripts that apply both the LGs and the hybrid Conditional Random Fields (CRF) and LG method, and returning a file with the processed text and annotated named entities. The methodology includes a linguistic study of the chemical domain, a study of existing LGs for chemical entities, and modifications to the LGs. The API was developed using Shell Script and Makefile and has undergone functional testing. The next steps of the project involve expanding and refining the rules in the LGs to achieve greater precision and coverage in recognizing chemical entities, as well as making the API available through a web interface.",
         details_keywords_title: "Keywords:",
         details1_keywords: "Local Grammars, Named Entity Recognition, Natural Language Processing, Chemical Entities.",
-        details_link_title: "Publication Link:",
-        details1_link_text: "Access Publication (INIC 2024)",
+        project1_link_title: "Publication Link",
 
         // Project 2
         project2_title: "CT Junior",
@@ -40,6 +39,20 @@ export const translations = {
         project3_title: "UFES GameLab",
         project3_desc: "Creating interactive experiences and games on the Roblox platform, using Luau for game logic. I also do basic 3D asset modeling with Blender.",
         tag_gamedev: "Game Development",
+
+         // Project 4
+        project4_title: "Personal Projects",
+        project4_desc: "I enjoy using programming to explore ideas and learn new technologies. Here are some of my smaller projects and academic experiments.",
+        project4_link_title: "See my project showcase here",
+
+        // --- Mini Projects ---
+        mini_projects_title: "Project Showcase",
+        mini_projects_subtitle: "Smaller projects, experiments, and academic work.",
+        mini_chess_desc: "A chess bot capable of playing basic moves against a human player.",
+        mini_telegram_bot_desc: "Automated sales bot integrated with Telegram for customer service.",
+        mini_terminal_games_desc: "Classic games implementation running purely on the terminal.",
+        mini_ufes_desc: "Collection of academic projects developed during my Computer Science course.",
+        mini_logic_desc: "Logic programming studies and implementation of logical dogmas.",
 
         // --- Education Section ---
         education_title: "Education",
@@ -73,7 +86,7 @@ export const translations = {
         skills_tools_title: "Tools & Editors:",
 
         // --- Footer & Links ---
-        links_title: "Links",
+        contact_title: "Contact",
         btn_view_more: "View details",
         link_old_version: "Access old version"
     },
@@ -102,8 +115,7 @@ export const translations = {
         details1_abstract_content: "名前付きエンティティ認識（NER）は、テキスト処理と情報抽出を含む活動の基本です。この研究には2つの目的があります。既存の化学分野の名前付きエンティティ認識（NER）のための局所文法（LG）を改善し、より包括的にすること、そして、入力ファイルを受け取り、LGとハイブリッドな条件付き確率場（CRF）およびLGの両方を適用するスクリプトを実行し、処理されたテキストと注釈付きの名前付きエンティティを含むファイルを返すことができるアプリケーションプログラミングインターフェース（API）を構築することです。方法論には、化学ドメインの言語学的研究、化学エンティティに関する既存のLGの研究、およびLGの変更が含まれます。APIはシェルスクリプトとMakefileを使用して開発され、機能テストが行われました。プロジェクトの次のステップでは、化学エンティティの認識における精度と網羅性を高めるためにLG内のルールを拡張および改良し、APIをWebインターフェース経由で利用可能にすることを目指します。",
         details_keywords_title: "キーワード:",
         details1_keywords: "局所文法, 名前付きエンティティ認識, 自然言語処理, 化学エンティティ.",
-        details_link_title: "出版物リンク:",
-        details1_link_text: "出版物を表示 (INIC 2024)",
+        project1_link_title: "出版物リンク",
 
         // Project 2
         project2_title: "CTジュニア",
@@ -115,6 +127,20 @@ export const translations = {
         project3_title: "UFESゲームラボ",
         project3_desc: "Robloxプラットフォームで、ゲームロジックにLuauを使用してインタラクティブな体験やゲームを作成しています。また、Blenderで基本的な3Dアセットのモデリングも行っています。",
         tag_gamedev: "ゲーム開発",
+
+         // Project 4
+        project4_title: "個人プロジェクト",
+        project4_desc: "プログラミングを使ってアイデアを探求し、新しい技術を学ぶことが好きです。ここでは、私の小さなプロジェクトや学術的な実験のいくつかを紹介します。",
+        project4_link_title: "ここで私のプロジェクトショーケースを見る",
+
+        // --- Mini Projects ---
+        mini_projects_title: "プロジェクトショーケース",
+        mini_projects_subtitle: "小規模なプロジェクト、実験、学術研究。",
+        mini_chess_desc: "人間と対戦できる基本的なチェスボット。",
+        mini_telegram_bot_desc: "Telegramと統合された自動販売ボット。",
+        mini_terminal_games_desc: "ターミナルで動作するクラシックゲームの実装。",
+        mini_ufes_desc: "コンピュータサイエンス課程で開発された学術プロジェクト集。",
+        mini_logic_desc: "論理プログラミングの研究と論理ドグマの実装。",
 
         // --- Education Section ---
         education_title: "学歴",
@@ -148,7 +174,7 @@ export const translations = {
         skills_tools_title: "ツールとエディタ:",
 
         // --- Footer & Links ---
-        links_title: "リンク",
+        contact_title: "お問い合わせ",
         btn_view_more: "もっと見る",
         link_old_version: "旧バージョンにアクセス"
     },
@@ -175,8 +201,7 @@ export const translations = {
         details1_abstract_content: "O Reconhecimento de Entidades Nomeadas (REN), é fundamental para atividades que envolvem processamento de texto e extração de informações. Este trabalho tem 2 objetivos: melhorar as Gramáticas Locais (GLs) existentes para o Reconhecimento de Entidades Nomeadas (REN) químicas, tornando-as mais abrangentes; e construir uma Application Programing Interface (API) que seja capaz de receber um arquivo de entrada, executar os scripts que aplicam tanto as GLs quanto o método híbrido Conditional Random Fields(CRF) e GL, e retornar um arquivo com o texto processado e com as entidades nomeadas anotadas. A metodologia inclui um estudo linguístico do domínio químico, estudo das GLs existentes para entidades químicas e alterações nas GLs. A API foi desenvolvida utilizando Shell Script e Makefile e foi submetida a testes funcionais. Os próximos passos do projeto envolvem a ampliação e refinamento das regras presentes nas GLs, visando maior precisão e abrangência no reconhecimento das entidades químicas, além da disponibilização da API por meio de uma interface web.",
         details_keywords_title: "Palavras-chave:",
         details1_keywords: "Gramáticas Locais, Reconhecimento de Entidades Nomeadas, Processamento de Linguagem Natural, Entidades Químicas.",
-        details_link_title: "Link da Publicação:",
-        details1_link_text: "Acessar Publicação (INIC 2024)",
+        project1_link_title: "Link da Publicação",
 
         // Project 2
         project2_title: "CT Junior",
@@ -188,6 +213,27 @@ export const translations = {
         project3_title: "UFES GameLab",
         project3_desc: "Criação de experiências e jogos interativos na plataforma Roblox, utilizando Luau para a lógica de jogo. Realizo também a modelagem de assets 3D básicos com o Blender.",
         tag_gamedev: "Desenvolvimento de Jogos",
+
+        // Project 4
+        project4_title: "Projetos Pessoais",
+        project4_desc: "Gosto de usar a programação para explorar ideias e aprender novas tecnologias. Aqui estão alguns dos meus projetos menores e experimentos acadêmicos.",
+        project4_link_title: "Veja aqui minha vitrine de projetos",
+
+		// --- Mini Projects ---
+		mini_projects_title: "Vitrine de Projetos",
+		mini_projects_subtitle: "Experimentos, estudos e projetos menores que demonstram minha paixão por código.",
+		mini_calc_desc: "Uma calculadora simples com histórico de operações.",
+		mini_weather_desc: "App de previsão do tempo consumindo API externa.",
+		btn_view_code: "Ver Código",
+		btn_view_live: "Ver Online",
+
+        // --- Mini Projects details ---
+        mini_chess_desc: "Um bot de xadrez capaz de jogar movimentos básicos contra um humano.",
+        mini_telegram_bot_desc: "Bot de vendas automatizado integrado ao Telegram para atendimento.",
+        mini_terminal_games_desc: "Implementação de jogos clássicos rodando puramente no terminal.",
+        mini_ufes_desc: "Coleção de projetos acadêmicos desenvolvidos durante o curso de Ciência da Computação.",
+        mini_logic_desc: "Estudos de programação lógica e implementação de dogmas lógicos.",
+
 
         // --- Education Section ---
         education_title: "Formação",
@@ -221,7 +267,7 @@ export const translations = {
         skills_tools_title: "Ferramentas e Editores:",
 
         // --- Footer & Links ---
-        links_title: "Links",
+        contact_title: "Contato",
         btn_view_more: "Ver detalhes",
         link_old_version: "Acessar versão antiga"
     }

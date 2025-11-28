@@ -3,9 +3,6 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { translations, Language } from '@/data/translations';
 
-// 1. Definimos um tipo para as chaves de tradução baseado no inglês (que é completo)
-type TranslationKey = keyof typeof translations['en'];
-
 type LanguageContextType = {
   lang: Language;
   setLang: (lang: Language) => void;
