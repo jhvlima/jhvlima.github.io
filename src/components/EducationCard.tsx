@@ -50,7 +50,7 @@ export default function EducationCard() {
           {semesters.map((sem) => (
             <div key={sem.number} className="relative pl-4 border-l-2 border-gray-300 hover:border-green-400 transition-colors">
               <h4 className="font-bold text-gray-800 mb-1 flex items-center gap-2">
-                {sem.number}º Período 
+                {sem.number}º {t(education_semester')} 
                 <span className={`text-xs font-normal px-2 py-0.5 rounded-full border ${
                   sem.statusKey === 'sem_completed' ? 'bg-green-100 text-green-800 border-green-200' :
                   sem.statusKey === 'sem_ongoing' ? 'bg-blue-100 text-blue-800 border-blue-200' :

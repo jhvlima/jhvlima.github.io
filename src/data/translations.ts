@@ -61,6 +61,7 @@ export const translations = {
         education_highlights_title: "Featured Courses:",
         education_highlights_list: "Artificial Intelligence, Compilers, Graph Theory, Object-Oriented Programming.",
         education_details_summary: "View full curriculum", // Texto do botão do Accordion
+        education_semester: "Semester",
 
         // Status Labels
         sem_completed: "Completed",
@@ -149,6 +150,7 @@ export const translations = {
         education_highlights_title: "主な科目:",
         education_highlights_list: "人工知能, コンパイラ, グラフ理論, オブジェクト指向プログラミング.",
         education_details_summary: "履修した全科目を見る",
+        education_semester: "セメスター",
 
         // Status Labels
         sem_completed: "完了",
@@ -242,6 +244,7 @@ export const translations = {
         education_highlights_title: "Disciplinas de Destaque:",
         education_highlights_list: "Inteligência Artificial, Compiladores, Teoria dos Grafos, Programação Orientada a Objetos.",
         education_details_summary: "Ver grade curricular completa",
+        education_semester: "Semestre",
 
         // Status Labels (Para serem usados no componente EducationCard)
         sem_completed: "Concluído",
