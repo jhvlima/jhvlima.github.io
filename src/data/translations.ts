@@ -32,7 +32,7 @@ export const translations = {
         // Project 2
         project2_title: "CT Junior",
         status_ongoing: "Ongoing",
-        project2_desc: "I work as a Project Consultant, focusing on web solutions development. My experience includes creating interfaces with React.js and building robust APIs with Nest.js.",
+        project2_desc: "I work as a Project Consultant, focusing on web solutions and automation. My experience includes creating interfaces with React.js, building robust APIs with Nest.js, and automating business processes using n8n.",
         tag_softeng: "Software Engineering",
 
         // Project 3
@@ -40,7 +40,7 @@ export const translations = {
         project3_desc: "Creating interactive experiences and games on the Roblox platform, using Luau for game logic. I also do basic 3D asset modeling with Blender.",
         tag_gamedev: "Game Development",
 
-         // Project 4
+        // Project 4
         project4_title: "Personal Projects",
         project4_desc: "I enjoy using programming to explore ideas and learn new technologies. Here are some of my smaller projects and academic experiments.",
         project4_link_title: "See my project showcase here",
@@ -60,7 +60,8 @@ export const translations = {
         education_university: "Federal University of Espírito Santo (UFES)",
         education_highlights_title: "Featured Courses:",
         education_highlights_list: "Artificial Intelligence, Compilers, Graph Theory, Object-Oriented Programming.",
-        education_details_summary: "View full curriculum", // Texto do botão do Accordion
+        education_details_summary: "View full curriculum",
+        education_semester: "Semester",
 
         // Status Labels
         sem_completed: "Completed",
@@ -120,7 +121,7 @@ export const translations = {
         // Project 2
         project2_title: "CTジュニア",
         status_ongoing: "進行中",
-        project2_desc: "プロジェクトコンサルタントとして、Webソリューション開発に注力しています。私の経験には、React.jsによるインターフェース作成やNest.jsによる堅牢なAPI構築が含まれます。",
+        project2_desc: "プロジェクトコンサルタントとして、Webソリューションと自動化に注力しています。私の経験には、React.jsによるUI作成、Nest.jsによる堅牢なAPI構築、そしてn8nを使用した業務プロセスの自動化が含まれます。",
         tag_softeng: "ソフトウェア工学",
 
         // Project 3
@@ -128,7 +129,7 @@ export const translations = {
         project3_desc: "Robloxプラットフォームで、ゲームロジックにLuauを使用してインタラクティブな体験やゲームを作成しています。また、Blenderで基本的な3Dアセットのモデリングも行っています。",
         tag_gamedev: "ゲーム開発",
 
-         // Project 4
+        // Project 4
         project4_title: "個人プロジェクト",
         project4_desc: "プログラミングを使ってアイデアを探求し、新しい技術を学ぶことが好きです。ここでは、私の小さなプロジェクトや学術的な実験のいくつかを紹介します。",
         project4_link_title: "ここで私のプロジェクトショーケースを見る",
@@ -149,6 +150,7 @@ export const translations = {
         education_highlights_title: "主な科目:",
         education_highlights_list: "人工知能, コンパイラ, グラフ理論, オブジェクト指向プログラミング.",
         education_details_summary: "履修した全科目を見る",
+        education_semester: "学期",
 
         // Status Labels
         sem_completed: "完了",
@@ -206,7 +208,7 @@ export const translations = {
         // Project 2
         project2_title: "CT Junior",
         status_ongoing: "Em andamento",
-        project2_desc: "Atuo como Consultor de Projetos, com foco no desenvolvimento de soluções web. Minha experiência inclui a criação de interfaces com React.js e a construção de APIs robustas com Nest.js.",
+        project2_desc: "Atuo como Consultor de Projetos, com foco em soluções web e automação. Minha experiência inclui a criação de interfaces com React.js, construção de APIs robustas com Nest.js e automação de processos de negócio utilizando n8n.",
         tag_softeng: "Engenharia de Software",
 
         // Project 3
@@ -242,6 +244,7 @@ export const translations = {
         education_highlights_title: "Disciplinas de Destaque:",
         education_highlights_list: "Inteligência Artificial, Compiladores, Teoria dos Grafos, Programação Orientada a Objetos.",
         education_details_summary: "Ver grade curricular completa",
+        education_semester: "Período", 
 
         // Status Labels (Para serem usados no componente EducationCard)
         sem_completed: "Concluído",

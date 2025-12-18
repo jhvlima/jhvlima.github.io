@@ -30,7 +30,8 @@ export const projectsData: Project[] = [
     statusKey: "status_ongoing",
     tags: [
       { text: "React.js" }, 
-      { text: "Nest.js" }, 
+      { text: "Nest.js" },
+      { text: "n8n" }, 
       { key: "tag_softeng" }
     ]
   },

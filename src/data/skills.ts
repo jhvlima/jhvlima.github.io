@@ -6,7 +6,7 @@ export interface SkillCategory {
 export const skillsData: SkillCategory[] = [
   {
     titleKey: "skills_languages_title",
-    items: ["C/C++", "Java", "Shell Script", "Swift UI", "Luau", "TypeScript"]
+    items: ["C/C++", "Python", "Java", "Shell Script", "Swift UI", "Luau", "TypeScript"]
   },
   {
     titleKey: "skills_frameworks_title",
@@ -14,6 +14,6 @@ export const skillsData: SkillCategory[] = [
   },
   {
     titleKey: "skills_tools_title",
-    items: ["Git", "VS Code", "Nano", "Blender", "Roblox Studio", "Linux"]
+    items: ["Git", "VS Code", "n8n", "Blender", "Roblox Studio", "Linux"]
   }
 ];

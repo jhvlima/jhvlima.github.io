@@ -14,21 +14,21 @@ export const miniProjectsData: MiniProject[] = [
     title: "Bot de Xadrez",
     descriptionKey: "mini_chess_desc",
     techStack: ["Python", "Chess Engine"],
-    repoLink: "https://github.com/jhvlima/Projetos/blob/main/botChess", 
+    repoLink: "https://github.com/jhvlima/botChess", 
   },
   {
     id: "vendas-telegram-bot",
     title: "Bot de Vendas para Telegram",
     descriptionKey: "mini_telegram_bot_desc",
     techStack: ["Python", "Telegram API"],
-    repoLink: "https://github.com/jhvlima/Projetos/blob/main/BotVendas"
+    repoLink: "https://github.com/jhvlima/botVendas"
   },
   {
     id: "terminal-games",
     title: "Jogos de Terminal",
     descriptionKey: "mini_terminal_games_desc",
     techStack: ["C"],
-    repoLink: "https://github.com/jhvlima/Projetos/tree/main/AngryBirds_dinamico"
+    repoLink: "https://github.com/jhvlima/myGames"
   },
   {
     id: "ufes",
@@ -42,6 +42,6 @@ export const miniProjectsData: MiniProject[] = [
     title: "Dogmas da Lógica",
     descriptionKey: "mini_logic_desc",
     techStack: ["Prolog", "Logic Programming"],
-    repoLink: "https://github.com/jhvlima/Projetos/blob/main/dogmasLogica/"
+    repoLink: "https://github.com/jhvlima/dogmasLogica/"
   }
 ];
