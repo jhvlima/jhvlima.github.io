@@ -14,7 +14,7 @@ export const miniProjectsData: MiniProject[] = [
     title: "Bot de Xadrez",
     descriptionKey: "mini_chess_desc",
     techStack: ["Python", "Chess Engine"],
-    repoLink: "https://github.com/jhvlima/botChess", 
+    repoLink: "https://colab.research.google.com/drive/1eFF8G6-i2fHREqepxqQLDSre_AQqZkuz?usp=sharing", 
   },
   {
     id: "vendas-telegram-bot",
