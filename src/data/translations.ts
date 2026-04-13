@@ -39,6 +39,7 @@ export const translations = {
         project3_title: "UFES GameLab",
         project3_desc: "Creating interactive experiences and games on the Roblox platform, using Luau for game logic. I also do basic 3D asset modeling with Blender.",
         tag_gamedev: "Game Development",
+        project3_link_title: "Play on Roblox",
 
         // Project 4
         project4_title: "Personal Projects",
@@ -128,6 +129,7 @@ export const translations = {
         project3_title: "UFESゲームラボ",
         project3_desc: "Robloxプラットフォームで、ゲームロジックにLuauを使用してインタラクティブな体験やゲームを作成しています。また、Blenderで基本的な3Dアセットのモデリングも行っています。",
         tag_gamedev: "ゲーム開発",
+        project3_link_title: "Robloxでプレイ",
 
         // Project 4
         project4_title: "個人プロジェクト",
@@ -215,6 +217,7 @@ export const translations = {
         project3_title: "UFES GameLab",
         project3_desc: "Criação de experiências e jogos interativos na plataforma Roblox, utilizando Luau para a lógica de jogo. Realizo também a modelagem de assets 3D básicos com o Blender.",
         tag_gamedev: "Desenvolvimento de Jogos",
+        project3_link_title: "Jogue no Roblox",
 
         // Project 4
         project4_title: "Projetos Pessoais",

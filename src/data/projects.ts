@@ -39,13 +39,14 @@ export const projectsData: Project[] = [
     id: "gamelab",
     titleKey: "project3_title",
     descKey: "project3_desc",
-    statusKey: "status_ongoing",
     tags: [
-      { text: "Roblox Studio" }, 
-      { text: "Luau" }, 
-      { text: "Blender" }, 
+      { text: "Roblox Studio" },
+      { text: "Luau" },
+      { text: "Blender" },
       { key: "tag_gamedev" }
-    ]
+    ],
+    link: "https://www.roblox.com/pt/games/123797405972371/I-LOVE-EATING-TRASH",
+    linkTitleKey: "project3_link_title"
   },
   {
     id: "mini_projects",

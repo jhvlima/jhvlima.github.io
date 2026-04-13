@@ -40,12 +40,12 @@ export const educationData = {
     },
     {
       number: 6,
-      statusKey: 'sem_ongoing',
+      statusKey: 'sem_completed',
       subjectsKey: 'sem6_subjects'
     },
     {
       number: 7,
-      statusKey: 'sem_pending',
+      statusKey: 'sem_ongoing',
       subjectsKey: 'sem7_subjects'
     },
     {
