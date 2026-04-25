@@ -7,6 +7,7 @@ export interface Project {
   statusKey?: string;
   link?: string;
   linkTitleKey?: string;
+  image?: string;
 }
 
 export const projectsData: Project[] = [
@@ -14,10 +15,11 @@ export const projectsData: Project[] = [
     id: "ic",
     titleKey: "project1_title",
     descKey: "project1_desc",
+    image: "/images/projects/ic_paper.png",
     tags: [
-      { key: "tag_nlp" }, 
-      { text: "Shell Script" }, 
-      { text: "Makefile" }, 
+      { key: "tag_nlp" },
+      { text: "Shell Script" },
+      { text: "Makefile" },
       { text: "API" }
     ],
     link: "https://www.inicepg.univap.br/cd/INIC_2024/anais/arquivos/RE_1100_1072_01.pdf",
@@ -27,18 +29,22 @@ export const projectsData: Project[] = [
     id: "ct",
     titleKey: "project2_title",
     descKey: "project2_desc",
+    image: "/images/projects/project_fullstack.png",
     statusKey: "status_ongoing",
     tags: [
-      { text: "React.js" }, 
+      { text: "React.js" },
       { text: "Nest.js" },
-      { text: "n8n" }, 
+      { text: "n8n" },
       { key: "tag_softeng" }
-    ]
+    ],
+    link: "https://www.ctjunior.com.br/",
+    linkTitleKey: "project2_link_title"
   },
   {
     id: "gamelab",
     titleKey: "project3_title",
     descKey: "project3_desc",
+    image: "/images/projects/roblox.webp",
     tags: [
       { text: "Roblox Studio" },
       { text: "Luau" },
@@ -52,10 +58,11 @@ export const projectsData: Project[] = [
     id: "mini_projects",
     titleKey: "project4_title",
     descKey: "project4_desc",
+    image: "/images/projects/project_terminal.png",
     tags: [
-      { text: "Git" }, 
-      { text: "Linux" }, 
-      { text: "GitHub" }, 
+      { text: "Git" },
+      { text: "Linux" },
+      { text: "GitHub" },
     ],
     link: "/vitrine",
     linkTitleKey: "project4_link_title"

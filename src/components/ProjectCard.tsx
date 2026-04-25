@@ -8,8 +8,18 @@ export default function ProjectCard({ project }: { project: Project }) {
   const linkTitleKey = project.linkTitleKey || 'details_link_title';
 
   return (
-    <div className="border-l-4 border-blue-500 bg-white shadow-sm rounded-r-lg p-6 mb-6 hover:shadow-md transition-shadow">
-      <h3 className="text-xl font-bold text-gray-800 m-0">{t(project.titleKey)}</h3>
+    <div className="border-l-4 border-blue-500 bg-white shadow-sm rounded-r-lg p-6 mb-6 hover:shadow-md transition-shadow flex flex-col md:flex-row gap-6">
+      {project.image && (
+        <div className="relative w-full h-56 md:h-auto md:w-1/3 shrink-0 bg-gray-50/50 rounded-md">
+          <img 
+            src={project.image} 
+            alt={t(project.titleKey)} 
+            className="w-full h-full md:absolute md:inset-0 p-2 object-contain object-center rounded-sm transition-all" 
+          />
+        </div>
+      )}
+      <div className="flex-1">
+        <h3 className="text-xl font-bold text-gray-800 m-0">{t(project.titleKey)}</h3>
 
       {project.statusKey && (
         <span className="inline-block bg-orange-500 text-white text-xs px-3 py-1 rounded-full my-2">
@@ -42,6 +52,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           {t(linkTitleKey)}
         </a>
       )}
+      </div>
     </div>
   );
 }

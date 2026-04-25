@@ -14,7 +14,7 @@ export const miniProjectsData: MiniProject[] = [
     title: "Bot de Xadrez",
     descriptionKey: "mini_chess_desc",
     techStack: ["Python", "Chess Engine"],
-    repoLink: "https://colab.research.google.com/drive/1eFF8G6-i2fHREqepxqQLDSre_AQqZkuz?usp=sharing", 
+    repoLink: "https://colab.research.google.com/drive/1eFF8G6-i2fHREqepxqQLDSre_AQqZkuz?usp=sharing",
   },
   {
     id: "vendas-telegram-bot",
@@ -39,9 +39,16 @@ export const miniProjectsData: MiniProject[] = [
   },
   {
     id: "dogmasLogica",
-    title: "Dogmas da Lógica",
+    title: "Lógica & Dogmas",
     descriptionKey: "mini_logic_desc",
     techStack: ["Prolog", "Logic Programming"],
-    repoLink: "https://github.com/jhvlima/dogmasLogica/"
+    repoLink: "https://github.com/jhvlima/dogmasLogica"
+  },
+  {
+    id: "go-project",
+    title: "Novo Projeto em Go",
+    descriptionKey: "mini_go_project_desc",
+    techStack: ["Go", "Golang", "Backend"],
+    repoLink: "https://github.com/jhvlima"
   }
 ];

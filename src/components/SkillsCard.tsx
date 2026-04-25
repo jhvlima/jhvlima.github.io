@@ -19,7 +19,7 @@ export default function SkillsCard() {
               {category.items.map((skill) => (
                 <span 
                   key={skill} 
-                  className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-md text-sm font-medium hover:bg-purple-50 hover:text-purple-700 transition-colors cursor-default"
+                  className="bg-white text-gray-700 text-sm font-semibold px-4 py-1.5 rounded-full border border-gray-200 shadow-sm hover:border-purple-400 hover:text-purple-600 hover:shadow transition-all cursor-default"
                 >
                   {skill}
                 </span>

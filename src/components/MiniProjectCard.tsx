@@ -7,7 +7,7 @@ export default function MiniProjectCard({ project }: { project: MiniProject }) {
   const { t } = useLanguage();
 
   return (
-    <div className="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-lg transition-all hover:-translate-y-1 flex flex-col h-full">
+    <div className="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-lg transition-all hover:-translate-y-1 flex flex-col h-fit break-inside-avoid mb-6">
       <div className="flex justify-between items-start mb-3">
         <h3 className="font-bold text-gray-800 text-lg">{project.title}</h3>
         
@@ -21,9 +21,9 @@ export default function MiniProjectCard({ project }: { project: MiniProject }) {
         </div>
       </div>
 
-      <p className="text-sm text-gray-600 mb-4 flex-grow">{t(project.descriptionKey)}</p>
+      <p className="text-sm text-gray-600 mb-4">{t(project.descriptionKey)}</p>
 
-      <div className="flex flex-wrap gap-2 mt-auto">
+      <div className="flex flex-wrap gap-2">
         {project.techStack.map(tech => (
           // USANDO O COMPONENTE TAG AQUI
           <Tag key={tech}>{tech}</Tag>

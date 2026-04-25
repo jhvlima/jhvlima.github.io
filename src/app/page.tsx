@@ -42,7 +42,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="flex flex-col gap-8">
           {/* Seção de Educação */}
           <div id="education" className="scroll-mt-24">
             <EducationCard />

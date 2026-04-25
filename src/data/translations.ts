@@ -17,10 +17,11 @@ export const translations = {
 
         // --- Projects Section ---
         projects_title: "Main Projects",
+        nav_vitrine: "Showcase",
         
         // Project 1
         project1_title: "Scientific Initiation: API for Chemical Entity Recognition",
-        project1_desc: "Development of an API to optimize Named Entity Recognition (NER) in texts from the chemical domain, combining Local Grammars and hybrid methods (CRF).",
+        project1_desc: "During two years of Scientific Initiation, I contributed to research in Natural Language Processing focused on chemistry. In the first year, I studied methodologies and tools like Unitex to build rules for Named Entity Recognition (NER), culminating in a published scientific article. In the second year, I focused on developing specific rules to identify organic and inorganic compounds, applying my technical background in chemistry to the research group's needs.",
         tag_nlp: "Natural Language Processing",
         details1_summary: "View full article abstract",
         details_abstract_title: "Abstract:",
@@ -32,12 +33,13 @@ export const translations = {
         // Project 2
         project2_title: "CT Junior",
         status_ongoing: "Ongoing",
-        project2_desc: "I work as a Project Consultant, focusing on web solutions and automation. My experience includes creating interfaces with React.js, building robust APIs with Nest.js, and automating business processes using n8n.",
+        project2_desc: "At CT Junior, I worked on end-to-end solutions, creating modern interfaces with React.js. I automated complex processes using n8n and developed advanced conversational and financial agents using RAG (Retrieval-Augmented Generation). For data persistence, I used databases like Supabase and PostgreSQL, delivering real value through modern technologies.",
         tag_softeng: "Software Engineering",
+        project2_link_title: "Visit CT Junior",
 
         // Project 3
         project3_title: "UFES GameLab",
-        project3_desc: "Creating interactive experiences and games on the Roblox platform, using Luau for game logic. I also do basic 3D asset modeling with Blender.",
+        project3_desc: "At the UFES GameLab, I joined a multidisciplinary team (statistics, design, and computer science) to develop an original, educational game on Roblox focused on environmental education. I was one of the lead programmers, developing the core logic, physics systems, events, scoring, and collisions using Luau. Additionally, I gained basic knowledge in 3D asset modeling using Blender.",
         tag_gamedev: "Game Development",
         project3_link_title: "Play on Roblox",
 
@@ -49,11 +51,12 @@ export const translations = {
         // --- Mini Projects ---
         mini_projects_title: "Project Showcase",
         mini_projects_subtitle: "Smaller projects, experiments, and academic work.",
-        mini_chess_desc: "A chess bot capable of playing basic moves against a human player.",
-        mini_telegram_bot_desc: "Automated sales bot integrated with Telegram for customer service.",
+        mini_chess_desc: "The chess bot was trained with about 1500 of my personal games played on chess.com. So try to beat me by clicking here.",
+        mini_telegram_bot_desc: "The Telegram bot is an interface I developed to facilitate the cash flow generation of a selection process stage at CT Junior. A message to the bot automatically registers sales in a Google Sheets spreadsheet.",
         mini_terminal_games_desc: "Classic games implementation running purely on the terminal.",
         mini_ufes_desc: "Collection of academic projects developed during my Computer Science course.",
-        mini_logic_desc: "Logic programming studies and implementation of logical dogmas.",
+        mini_logic_desc: "dogmasLogica is a personal project I created to study Catholic dogmas and develop my Prolog skills.",
+        mini_go_project_desc: "A new project currently being developed using the Go (Golang) programming language.",
 
         // --- Education Section ---
         education_title: "Education",
@@ -107,10 +110,11 @@ export const translations = {
 
         // --- Projects Section ---
         projects_title: "主なプロジェクト",
+        nav_vitrine: "ショーケース",
 
         // Project 1
         project1_title: "科学的開始：化学物質エンティティ認識のためのAPI",
-        project1_desc: "化学分野のテキストにおける名前付きエンティティ認識（NER）を最適化するためのAPIの開発。局所文法とハイブリッド手法（CRF）を組み合わせています。",
+        project1_desc: "2年間の科学研究（Iniciação Científica）において、化学分野に焦点を当てた自然言語処理の研究に貢献しました。1年目は、名前付きエンティティ認識（NER）のためのルールを構築するためにUnitexなどの方法論やツールを学び、科学論文の発表に至りました。2年目は、化学の専門知識を活かし、有機・無機化合物を特定するための具体的なルールの開発に注力しました。",
         tag_nlp: "自然言語処理",
         details1_summary: "論文の要旨全体を見る",
         details_abstract_title: "要旨:",
@@ -122,12 +126,13 @@ export const translations = {
         // Project 2
         project2_title: "CTジュニア",
         status_ongoing: "進行中",
-        project2_desc: "プロジェクトコンサルタントとして、Webソリューションと自動化に注力しています。私の経験には、React.jsによるUI作成、Nest.jsによる堅牢なAPI構築、そしてn8nを使用した業務プロセスの自動化が含まれます。",
+        project2_desc: "CT Juniorでは、React.jsを使用して最新のインターフェースを作成するなど、エンドツーエンドのソリューション開発に携わりました。n8nを用いた複雑なプロセスの自動化や、RAG（Retrieval-Augmented Generation）を活用した高度な対話型および金融エージェントの開発を行いました。データの保存にはSupabaseやPostgreSQLを使用し、最新技術を通じて価値を提供しました。",
         tag_softeng: "ソフトウェア工学",
+        project2_link_title: "CT Juniorを訪問",
 
         // Project 3
         project3_title: "UFESゲームラボ",
-        project3_desc: "Robloxプラットフォームで、ゲームロジックにLuauを使用してインタラクティブな体験やゲームを作成しています。また、Blenderで基本的な3Dアセットのモデリングも行っています。",
+        project3_desc: "UFES GameLabでは、多分野のチーム（統計学、デザイン、計算機科学）に参加し、環境教育に焦点を当てたRoblox上のオリジナル教育ゲームを開発しました。主なプログラマーの一人として、Luauを使用してコアロジック、物理システム、イベント、スコアリング、衝突判定などを開発しました。また、Blenderを使用した3Dアセットモデリングの基礎も習得しました。",
         tag_gamedev: "ゲーム開発",
         project3_link_title: "Robloxでプレイ",
 
@@ -139,11 +144,12 @@ export const translations = {
         // --- Mini Projects ---
         mini_projects_title: "プロジェクトショーケース",
         mini_projects_subtitle: "小規模なプロジェクト、実験、学術研究。",
-        mini_chess_desc: "人間と対戦できる基本的なチェスボット。",
-        mini_telegram_bot_desc: "Telegramと統合された自動販売ボット。",
+        mini_chess_desc: "このチェスボットは、chess.comで私がプレイした約1500回の個人的な対局で訓練されました。ここをクリックして私に勝ってみてください。",
+        mini_telegram_bot_desc: "Telegramボットは、CT Juniorの選考プロセスのキャッシュフロー生成を促進するために開発したインターフェースです。ボットにメッセージを送信すると、Googleスプレッドシートに売上が自動的に登録されます。",
         mini_terminal_games_desc: "ターミナルで動作するクラシックゲームの実装。",
         mini_ufes_desc: "コンピュータサイエンス課程で開発された学術プロジェクト集。",
-        mini_logic_desc: "論理プログラミングの研究と論理ドグマの実装。",
+        mini_logic_desc: "dogmasLogicaは、カトリックの教義を研究し、Prologのスキルを開発するために作成した個人的なプロジェクトです。",
+        mini_go_project_desc: "Go (Golang) プログラミング言語を使用して現在開発中の新しいプロジェクト。",
 
         // --- Education Section ---
         education_title: "学歴",
@@ -195,10 +201,11 @@ export const translations = {
 
         // --- Projects Section ---
         projects_title: "Projetos Principais",
+        nav_vitrine: "Vitrine",
 
         // Project 1
         project1_title: "Iniciação Científica: API para Reconhecimento de Entidades Químicas",
-        project1_desc: "Desenvolvimento de uma API para otimizar o Reconhecimento de Entidades Nomeadas (REN) em textos do domínio químico, combinando Gramáticas Locais e métodos híbridos (CRF).",
+        project1_desc: "Durante dois anos de Iniciação Científica, contribuí para pesquisas em Processamento de Linguagem Natural com foco na área de química. No primeiro ano, estudei metodologias e ferramentas como o Unitex para a construção de regras para Reconhecimento de Entidades Nomeadas (REN), culminando na publicação de um artigo científico. No segundo ano, foquei no desenvolvimento de regras específicas para identificar compostos orgânicos e inorgânicos, aliando meu conhecimento técnico em química às necessidades do grupo de pesquisa.",
         tag_nlp: "Processamento de Linguagem Natural",
         details1_summary: "Ver resumo completo do artigo",
         details_abstract_title: "Resumo:",
@@ -210,12 +217,13 @@ export const translations = {
         // Project 2
         project2_title: "CT Junior",
         status_ongoing: "Em andamento",
-        project2_desc: "Atuo como Consultor de Projetos, com foco em soluções web e automação. Minha experiência inclui a criação de interfaces com React.js, construção de APIs robustas com Nest.js e automação de processos de negócio utilizando n8n.",
+        project2_desc: "Na CT Junior, atuei no desenvolvimento de soluções completas, criando interfaces modernas com React.js. Trabalhei na automação de processos complexos utilizando n8n e no desenvolvimento de agentes conversacionais e financeiros avançados com RAG (Retrieval-Augmented Generation). Para a persistência de dados, utilizei bancos como Supabase e PostgreSQL, entregando valor real através de tecnologias modernas.",
         tag_softeng: "Engenharia de Software",
+        project2_link_title: "Acesse a CT Junior",
 
         // Project 3
         project3_title: "UFES GameLab",
-        project3_desc: "Criação de experiências e jogos interativos na plataforma Roblox, utilizando Luau para a lógica de jogo. Realizo também a modelagem de assets 3D básicos com o Blender.",
+        project3_desc: "No UFES GameLab, integrei uma equipe multidisciplinar (estatística, design e computação) para desenvolver um jogo original e educativo no Roblox focado em educação ambiental. Fui um dos responsáveis pela programação, desenvolvendo a lógica principal, sistemas de física, eventos, pontuação e colisões utilizando Luau. Além disso, adquiri conhecimentos básicos em modelagem 3D de assets utilizando Blender.",
         tag_gamedev: "Desenvolvimento de Jogos",
         project3_link_title: "Jogue no Roblox",
 
@@ -233,11 +241,12 @@ export const translations = {
 		btn_view_live: "Ver Online",
 
         // --- Mini Projects details ---
-        mini_chess_desc: "Um bot de xadrez capaz de jogar movimentos básicos contra um humano.",
-        mini_telegram_bot_desc: "Bot de vendas automatizado integrado ao Telegram para atendimento.",
+        mini_chess_desc: "O bot de xadrez foi treinado com cerca de 1500 partidas pessoais jogadas no chess.com. Então tente me vencer clicando aqui.",
+        mini_telegram_bot_desc: "O bot do Telegram é uma interface que desenvolvi para facilitar a geração do fluxo de caixa de uma etapa do processo seletivo da CT Junior. Uma mensagem ao bot cadastra as vendas automaticamente em uma planilha do Google Sheets.",
         mini_terminal_games_desc: "Implementação de jogos clássicos rodando puramente no terminal.",
         mini_ufes_desc: "Coleção de projetos acadêmicos desenvolvidos durante o curso de Ciência da Computação.",
-        mini_logic_desc: "Estudos de programação lógica e implementação de dogmas lógicos.",
+        mini_logic_desc: "O dogmasLogica é um projeto pessoal que criei para estudar dogmas católicos e desenvolver minhas habilidades em Prolog.",
+        mini_go_project_desc: "Um novo projeto em desenvolvimento utilizando a linguagem de programação Go (Golang).",
 
 
         // --- Education Section ---
