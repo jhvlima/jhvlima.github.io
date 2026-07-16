@@ -5,11 +5,11 @@ Este portfólio foi migrado de uma estrutura estática (HTML/CSS/JS) para uma ar
 
 ### 🛠️ Tecnologias Principais
 
-1.  **Next.js 15 (App Router):**
+1.  **Next.js 16 (App Router):**
 
       * Utilizado como framework principal React.
-      * **Por que:** Oferece roteamento baseado em arquivos (`app/`), otimização automática de imagens (embora desligada para GH Pages, a estrutura está pronta) e suporte nativo a TypeScript.
-      * **Modo de Exportação:** Configurado com `output: 'export'` para gerar um site puramente estático (SSG - Static Site Generation), compatível com hospedagens sem servidor Node.js como o GitHub Pages.
+      * **Por que:** Oferece roteamento baseado em arquivos (`app/`), integração com `next/image` para dimensões e carregamento tardio e suporte nativo a TypeScript.
+      * **Modo de Exportação:** Configurado em `next.config.mjs` com `output: 'export'` para gerar um site puramente estático (SSG - Static Site Generation), compatível com hospedagens sem servidor Node.js como o GitHub Pages. O mesmo arquivo mantém `images.unoptimized` para a exportação estática e ativa o React Compiler.
 
 2.  **TypeScript:**
 
@@ -24,7 +24,7 @@ Este portfólio foi migrado de uma estrutura estática (HTML/CSS/JS) para uma ar
 4.  **GitHub Actions (CI/CD):**
 
       * Automação de deploy.
-      * **Lógica:** Toda vez que há um `push` na branch `main`, o GitHub sobe um container Ubuntu, instala as dependências, roda o build do Next.js e publica a pasta `out/` resultante no GitHub Pages.
+      * **Lógica:** Toda vez que há um `push` na branch `main`, o GitHub sobe um container Ubuntu com Node.js 22, instala e audita as dependências, executa lint e typecheck, gera e valida a exportação estática e publica a pasta `out/` resultante no GitHub Pages.
 
 ### 🧠 Lógica de Programação & Padrões de Projeto
 
@@ -35,8 +35,9 @@ A refatoração focou em **Separation of Concerns** (Separação de Responsabili
   * **Desafio:** Como manter o idioma selecionado (PT/EN/JA) persistente enquanto o usuário navega, sem usar bibliotecas pesadas de internacionalização e sem servidor?
   * **Solução:** Criamos o `LanguageContext`.
       * Ele envolve toda a aplicação no `layout.tsx`.
-      * Usa o hook `useState` para guardar o idioma atual.
-      * Usa `useEffect` para ler/salvar a preferência no `localStorage` do navegador.
+      * Renderiza português no HTML estático, sem bloquear o conteúdo durante a hidratação.
+      * Usa `useSyncExternalStore` para sincronizar a preferência persistida no `localStorage`, inclusive entre abas.
+      * Mantém o atributo `<html lang>` alinhado ao idioma ativo.
       * Exporta uma função `t(chave)` que qualquer componente pode usar para traduzir textos instantaneamente.
 
 #### 2\. Data-Driven UI (Interface Orientada a Dados)
@@ -49,24 +50,25 @@ A refatoração focou em **Separation of Concerns** (Separação de Responsabili
 #### 3\. Internacionalização (i18n) Manual
 
   * **Estratégia:** Em vez de usar bibliotecas complexas como `i18next`, criamos um dicionário simples de chaves-valores (`translations.ts`).
-  * **Lógica de Acesso Seguro:** Para evitar erros de TypeScript ao acessar chaves dinâmicas, usamos Type Assertion (`as any`) controlado dentro da função `t()`. Se uma tradução faltar, o sistema falha graciosamente mostrando a própria chave, em vez de quebrar a página.
+  * **Lógica de Acesso Seguro:** `TranslationKey` restringe `t()` e os arquivos de dados às chaves válidas do dicionário. Traduções ausentes são detectadas pelo TypeScript antes do deploy.
 
 #### 4\. Componentização Atômica
 
   * Dividimos a UI em partes reutilizáveis:
       * `ProjectCard`: Aceita um objeto `Project` como "prop" e cuida de toda a renderização visual dele.
-      * `EducationCard`: Encapsula a lógica de abrir/fechar (Accordion) dos semestres usando a tag nativa `<details>` estilizada, sem precisar de JavaScript extra para animação básica.
+      * `EducationCard`: Usa `<details>` e `<summary>` nativos para manter o currículo acessível mesmo sem JavaScript.
       * `LanguageSwitcher`: Componente isolado apenas para os botões de troca de língua.
 
 ### 📂 Estrutura de Diretórios (Arquitetura)
 
 ```text
-src/
-├── app/           # Rotas e Layout (Next.js App Router)
-├── components/    # Blocos visuais (Cards, Botões)
-├── context/       # Lógica global (Estado do Idioma)
-├── data/          # "Banco de dados" estático (JSONs tipados)
-└── styles/        # Configurações globais do Tailwind
+.
+├── scripts/       # Validações do artefato exportado
+└── src/
+    ├── app/       # Rotas, layout e estilos globais (Next.js App Router)
+    ├── components/  # Blocos visuais (Cards, Botões)
+    ├── context/     # Lógica global (Estado do idioma)
+    └── data/        # "Banco de dados" estático (objetos TypeScript tipados)
 ```
 
 -----
@@ -75,21 +77,22 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+Use Node.js 22 or newer (`.nvmrc` pins the local major for nvm users). Install the dependencies and start the development server:
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+
+Antes de enviar alterações, execute a mesma validação usada no deploy:
+
+```bash
+npm run check
+```
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
@@ -102,8 +105,6 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy no GitHub Pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+O workflow `.github/workflows/deploy.yml` valida o projeto e publica automaticamente a exportação estática no GitHub Pages após cada `push` na branch `main`. Também é possível iniciá-lo manualmente pela aba Actions.

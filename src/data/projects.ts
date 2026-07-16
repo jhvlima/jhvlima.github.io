@@ -1,12 +1,14 @@
 // src/data/projects.ts
+import type { TranslationKey } from './translations';
+
 export interface Project {
   id: string;
-  titleKey: string;
-  descKey: string;
-  tags: { text?: string; key?: string }[]; // Pode ser texto fixo ou chave de tradução
-  statusKey?: string;
+  titleKey: TranslationKey;
+  descKey: TranslationKey;
+  tags: { text?: string; key?: TranslationKey }[]; // Pode ser texto fixo ou chave de tradução
+  statusKey?: TranslationKey;
   link?: string;
-  linkTitleKey?: string;
+  linkTitleKey?: TranslationKey;
   image?: string;
 }
 
@@ -15,7 +17,7 @@ export const projectsData: Project[] = [
     id: "ic",
     titleKey: "project1_title",
     descKey: "project1_desc",
-    image: "/images/projects/ic_paper.png",
+    image: "/images/projects/ic_paper.webp",
     tags: [
       { key: "tag_nlp" },
       { text: "Shell Script" },
@@ -29,7 +31,7 @@ export const projectsData: Project[] = [
     id: "ct",
     titleKey: "project2_title",
     descKey: "project2_desc",
-    image: "/images/projects/project_fullstack.png",
+    image: "/images/projects/ct.png",
     statusKey: "status_ongoing",
     tags: [
       { text: "React.js" },
@@ -58,13 +60,13 @@ export const projectsData: Project[] = [
     id: "mini_projects",
     titleKey: "project4_title",
     descKey: "project4_desc",
-    image: "/images/projects/project_terminal.png",
+    image: "/images/projects/project_terminal.webp",
     tags: [
       { text: "Git" },
       { text: "Linux" },
       { text: "GitHub" },
     ],
-    link: "/vitrine",
+    link: "/vitrine/",
     linkTitleKey: "project4_link_title"
   }
 ];

@@ -1,12 +1,14 @@
+import type { TranslationKey } from './translations';
+
 export interface SkillCategory {
-  titleKey: string; // Chave para tradução (Ex: "Linguagens")
+  titleKey: TranslationKey; // Chave para tradução (Ex: "Linguagens")
   items: string[];
 }
 
 export const skillsData: SkillCategory[] = [
   {
     titleKey: "skills_languages_title",
-    items: ["C/C++", "Python", "Java", "Shell Script", "Swift UI", "Luau", "TypeScript"]
+    items: ["C/C++", "Python", "Java", "Shell Script", "SwiftUI", "Luau", "TypeScript"]
   },
   {
     titleKey: "skills_frameworks_title",

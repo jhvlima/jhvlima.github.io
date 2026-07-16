@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // <--- Gera HTML estático na pasta 'out'
+  output: 'export',
   images: {
-    unoptimized: true, // <--- Desliga otimização de imagem (Server-Side) que não funciona no GH Pages
+    unoptimized: true,
   },
-  // O basePath é opcional, mas se as rotas quebrarem, pode ser necessário descomentar:
-  // basePath: '/jhvlima.github.io', 
+  reactCompiler: true,
+  trailingSlash: true,
 };
 
 export default nextConfig;

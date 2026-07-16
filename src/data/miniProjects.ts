@@ -1,54 +1,54 @@
+import type { TranslationKey } from './translations';
+
 export interface MiniProject {
   id: string;
-  title: string;
-  descriptionKey: string;
+  titleKey: TranslationKey;
+  descriptionKey: TranslationKey;
   techStack: string[];
   repoLink?: string;
-  liveLink?: string;
-  image?: string;
+  repoLinkLabel?: "GitHub" | "Colab";
 }
 
 export const miniProjectsData: MiniProject[] = [
   {
     id: "chess-bot",
-    title: "Bot de Xadrez",
+    titleKey: "mini_chess_title",
     descriptionKey: "mini_chess_desc",
-    techStack: ["Python", "Chess Engine"],
-    repoLink: "https://colab.research.google.com/drive/1eFF8G6-i2fHREqepxqQLDSre_AQqZkuz?usp=sharing",
+    techStack: ["Python", "Machine Learning", "Flask", "UCI"],
+    repoLink: "https://github.com/jhvlima/botChess",
+  },
+  {
+    id: "n8n-workflows",
+    titleKey: "mini_n8n_workflows_title",
+    descriptionKey: "mini_n8n_workflows_desc",
+    techStack: ["n8n", "GitHub API", "OpenAI API", "Documentation as Code"],
+    repoLink: "https://github.com/jhvlima/n8n-workflows",
   },
   {
     id: "vendas-telegram-bot",
-    title: "Bot de Vendas para Telegram",
+    titleKey: "mini_telegram_bot_title",
     descriptionKey: "mini_telegram_bot_desc",
     techStack: ["Python", "Telegram API"],
     repoLink: "https://github.com/jhvlima/botVendas"
   },
   {
     id: "terminal-games",
-    title: "Jogos de Terminal",
+    titleKey: "mini_terminal_games_title",
     descriptionKey: "mini_terminal_games_desc",
     techStack: ["C"],
-    repoLink: "https://github.com/jhvlima/myGames"
   },
   {
     id: "ufes",
-    title: "Projetos UFES",
+    titleKey: "mini_ufes_title",
     descriptionKey: "mini_ufes_desc",
     techStack: ["Academic", "Java", "C", "Python"],
     repoLink: "https://github.com/jhvlima/UFES"
   },
   {
     id: "dogmasLogica",
-    title: "Lógica & Dogmas",
+    titleKey: "mini_logic_title",
     descriptionKey: "mini_logic_desc",
     techStack: ["Prolog", "Logic Programming"],
     repoLink: "https://github.com/jhvlima/dogmasLogica"
-  },
-  {
-    id: "go-project",
-    title: "Novo Projeto em Go",
-    descriptionKey: "mini_go_project_desc",
-    techStack: ["Go", "Golang", "Backend"],
-    repoLink: "https://github.com/jhvlima"
   }
 ];
