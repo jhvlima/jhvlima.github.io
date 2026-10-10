@@ -194,7 +194,7 @@ export const educationData = {
         {
           id: 'computer-science-ufes-07',
           ordinal: 7,
-          status: 'ongoing',
+          status: 'completed',
           items: [
             { id: 'database-1', kind: 'course', labelKey: 'education_subject_database_1' },
             {
@@ -219,12 +219,27 @@ export const educationData = {
         {
           id: 'computer-science-ufes-08',
           ordinal: 8,
-          status: 'planned',
+          status: 'ongoing',
           items: [
             {
               id: 'scientific-research-methodology',
               kind: 'course',
               labelKey: 'education_subject_scientific_research_methodology',
+            },
+            {
+              id: 'mathematics-for-data-science',
+              kind: 'course',
+              labelKey: 'education_subject_mathematics_for_data_science',
+            },
+            {
+              id: 'data-science',
+              kind: 'course',
+              labelKey: 'education_subject_data_science',
+            },
+            {
+              id: 'computer-graphics',
+              kind: 'course',
+              labelKey: 'education_subject_computer_graphics',
             },
           ],
         },
