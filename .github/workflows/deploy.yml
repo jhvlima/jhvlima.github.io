@@ -29,8 +29,8 @@ jobs:
         uses: actions/configure-pages@v6
       - name: Install dependencies
         run: npm ci
-      - name: Audit dependencies
-        run: npm run audit
+      - name: Audit production dependencies
+        run: npm run audit:production
       - name: Lint
         run: npm run lint
       - name: Typecheck
@@ -43,6 +43,34 @@ jobs:
         uses: actions/upload-pages-artifact@v5
         with:
           path: ./out
+
+  audit:
+    name: Full dependency audit (informational)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      # Keep development-tool advisories visible without blocking Pages.
+      # Revisit this policy when GHSA-vfj7-8cjw-p6xm has a patched release.
+      - name: Audit all dependencies
+        id: full-audit
+        continue-on-error: true
+        run: npm run audit
+      - name: Report audit result
+        if: steps.full-audit.outcome == 'failure'
+        run: |
+          echo "::warning::Full dependency audit failed. Review the Audit all dependencies step; this audit does not block Pages."
+          echo "### Full dependency audit needs attention" >> "$GITHUB_STEP_SUMMARY"
+          echo "The full audit returned a non-zero status. Review the audit step logs for advisories or audit errors. Production dependencies are audited separately and block deployment on high or critical vulnerabilities." >> "$GITHUB_STEP_SUMMARY"
 
   deploy:
     environment:

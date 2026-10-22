@@ -11,11 +11,12 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "audit": "npm audit --audit-level=high",
+    "audit:production": "npm audit --omit=dev --audit-level=high",
     "validate:export": "node scripts/validate-export.mjs",
-    "check": "npm run audit && npm run lint && npm run typecheck && npm run build && npm run validate:export"
+    "check": "npm run audit:production && npm run lint && npm run typecheck && npm run build && npm run validate:export"
   },
   "dependencies": {
-    "next": "16.2.10",
+    "next": "16.4.2",
     "react": "19.2.7",
     "react-dom": "19.2.7"
   },
@@ -26,11 +27,11 @@
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
-    "eslint-config-next": "16.2.10",
+    "eslint-config-next": "16.4.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
   "overrides": {
-    "postcss": "8.5.19"
+    "postcss": "8.5.31"
   }
 }

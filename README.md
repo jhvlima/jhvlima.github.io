@@ -24,7 +24,7 @@ Este portfólio foi migrado de uma estrutura estática (HTML/CSS/JS) para uma ar
 4.  **GitHub Actions (CI/CD):**
 
       * Automação de deploy.
-      * **Lógica:** Toda vez que há um `push` na branch `main`, o GitHub sobe um container Ubuntu com Node.js 22, instala e audita as dependências, executa lint e typecheck, gera e valida a exportação estática e publica a pasta `out/` resultante no GitHub Pages.
+      * **Lógica:** Toda vez que há um `push` na branch `main`, o GitHub sobe um container Ubuntu com Node.js 22, instala as dependências, audita as dependências de produção, executa lint e typecheck, gera e valida a exportação estática e publica a pasta `out/` resultante no GitHub Pages. Uma auditoria completa, incluindo ferramentas de desenvolvimento, roda em um job separado e registra avisos sem bloquear o deploy.
 
 ### 🧠 Lógica de Programação & Padrões de Projeto
 
@@ -93,6 +93,10 @@ Antes de enviar alterações, execute a mesma validação usada no deploy:
 ```bash
 npm run check
 ```
+
+Esse comando bloqueia em vulnerabilidades altas ou críticas nas dependências de produção (`npm run audit:production`). Para consultar também as ferramentas de desenvolvimento, execute `npm run audit`.
+
+A auditoria completa permanece informativa no CI enquanto a dependência de lint `braces` não possui uma versão corrigida para [GHSA-vfj7-8cjw-p6xm](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm). Essa política aceita temporariamente o risco nas ferramentas de desenvolvimento e deve ser revista quando houver correção. Falhas de instalação continuam visíveis como falhas do job de auditoria.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
