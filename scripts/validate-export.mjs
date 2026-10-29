@@ -34,9 +34,11 @@ const checks = [
     ],
   },
   {
-    file: "out/vitrine/index.html",
+    file: "out/hub/index.html",
     includes: [
-      "Vitrine de Projetos",
+      "Hub de Projetos",
+      'id="contact"',
+      'href="/hub/#contact"',
       "botChess",
       "n8n-workflows",
       "https://github.com/jhvlima/botChess",
@@ -51,13 +53,23 @@ const checks = [
     ],
   },
   {
+    file: "out/vitrine/index.html",
+    includes: [
+      "window.location.replace('/hub/'",
+      'http-equiv="refresh" content="0;url=/hub/"',
+      'href="https://jhvlima.github.io/hub/"',
+      'name="robots" content="noindex"',
+    ],
+    excludes: ["botChess"],
+  },
+  {
     file: "out/404.html",
     includes: ['<meta name="robots" content="noindex"'],
     excludes: ['<meta name="robots" content="index, follow"'],
   },
   {
     file: "out/antigo/v2/index.html",
-    includes: ['href="/vitrine/"'],
+    includes: ['href="/hub/"'],
     excludes: ['href="projetos.html"'],
   },
   {
@@ -69,9 +81,9 @@ const checks = [
     file: "out/sitemap.xml",
     includes: [
       "https://jhvlima.github.io/",
-      "https://jhvlima.github.io/vitrine/",
+      "https://jhvlima.github.io/hub/",
     ],
-    excludes: [],
+    excludes: ["https://jhvlima.github.io/vitrine/"],
   },
 ];
 

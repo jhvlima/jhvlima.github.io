@@ -5,6 +5,7 @@ import { educationData } from '@/data/education';
 import { projectsData, type Project } from '@/data/projects';
 import EducationPeriods, { statusPresentation } from './EducationPeriods';
 import styles from './EducationCard.module.css';
+import ArrowIcon from './ui/ArrowIcon';
 
 const graduationExperiences = ['ct', 'ic', 'gamelab']
   .map(id => projectsData.find(project => project.id === id))
@@ -24,7 +25,7 @@ function Experience({ project }: { project: Project }) {
         <ul aria-label={t('project_technologies_label')} className={styles.tags}>
           {project.tags.map((tag, index) => <li key={tag.key ?? tag.text ?? index}>{tag.key ? t(tag.key) : tag.text}</li>)}
         </ul>
-        {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer">{t(project.linkTitleKey ?? 'btn_view_more')} <span aria-hidden="true">↗</span><span className="sr-only"> ({t('opens_new_tab')})</span></a>}
+        {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer">{t(project.linkTitleKey ?? 'btn_view_more')}<ArrowIcon external /><span className="sr-only"> ({t('opens_new_tab')})</span></a>}
       </div>
     </details>
   );
@@ -36,17 +37,16 @@ export default function EducationCard() {
     <div className={styles.trajectory}>
       <header className={styles.heading}>
         <h2 id="education-title">{t('education_title')}</h2>
-        <p>{t('education_intro')}</p>
       </header>
       <ol className={styles.timeline} aria-label={t('education_path_label')}>
         <li className={styles.milestone}>
-          <span aria-hidden="true" className={styles.dot}>01</span>
+          <span aria-hidden="true" className={styles.dot} />
           <details className={styles.branchRoot}>
             <summary><span className={styles.label}><span className={styles.status}>{t('education_level_technical')}</span><strong>{t('education_technical_course')}</strong><span>{t('education_technical_institution')}</span></span><Chevron /></summary>
             <p className={styles.note}>{t('education_technical_description')}</p>
           </details>
         </li>
-        {educationData.programs.map((program, index) => {
+        {educationData.programs.map(program => {
           const current = program.periods.find(period => period.status === 'ongoing');
           const periodLabel = current
             ? lang === 'pt' ? `${current.ordinal}º ${t('education_semester')}`
@@ -55,7 +55,7 @@ export default function EducationCard() {
             : null;
           return (
             <li key={program.id} className={styles.milestone}>
-              <span aria-hidden="true" className={`${styles.dot} ${program.status === 'ongoing' ? styles.currentDot : ''}`}>{String(index + 2).padStart(2, '0')}</span>
+              <span aria-hidden="true" className={`${styles.dot} ${program.status === 'ongoing' ? styles.currentDot : ''}`} />
               <details className={`education-details education-program ${styles.branchRoot}`}>
                 <summary>
                   <span className={styles.label}>
@@ -82,7 +82,7 @@ export default function EducationCard() {
           );
         })}
         <li className={`${styles.milestone} ${styles.future}`}>
-          <span aria-hidden="true" className={styles.dot}>···</span>
+          <span aria-hidden="true" className={styles.dot} />
           <span className={styles.label}><span className={styles.status}>{t('education_next_chapters')}</span><strong>{t('education_continues')}</strong><span>{t('education_continuation_description')}</span></span>
         </li>
       </ol>

@@ -8,14 +8,26 @@ export interface SkillCategory {
 export const skillsData: SkillCategory[] = [
   {
     titleKey: "skills_languages_title",
-    items: ["C/C++", "Python", "Java", "Shell Script", "SwiftUI", "Luau", "TypeScript"]
+    items: ["Python", "TypeScript", "SQL", "C/C++", "Java", "Shell Script", "Luau"]
   },
   {
     titleKey: "skills_frameworks_title",
-    items: ["React.js", "Next.js", "Tailwind CSS"]
+    items: ["React.js", "Next.js", "Tailwind CSS", "SwiftUI"]
+  },
+  {
+    titleKey: "skills_data_ai_title",
+    items: ["pandas", "scikit-learn", "XGBoost"]
+  },
+  {
+    titleKey: "skills_integrations_title",
+    items: ["APIs REST", "Supabase", "PostgreSQL"]
   },
   {
     titleKey: "skills_tools_title",
     items: ["Git", "VS Code", "n8n", "Blender", "Roblox Studio", "Linux"]
+  },
+  {
+    titleKey: "skills_ai_development_title",
+    items: ["Antigravity", "Claude", "Codex"]
   }
 ];

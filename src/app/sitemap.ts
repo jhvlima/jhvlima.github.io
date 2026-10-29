@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: "https://jhvlima.github.io/vitrine/",
+      url: "https://jhvlima.github.io/hub/",
       changeFrequency: "monthly",
       priority: 0.7,
     },

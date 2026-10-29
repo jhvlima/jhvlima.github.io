@@ -1,0 +1,54 @@
+.notebook-home-content { grid-area: records; min-width: 0; }
+.notebook-profile { padding-bottom: 48px; }
+.notebook-profile h1 { max-width: 19ch; }
+.notebook-profile .notebook-profile-course { max-width: 64ch; margin-top: 20px; }
+.notebook-profile-course strong { font-weight: 550; }
+.notebook-profile .notebook-profile-bio { max-width: 67ch; margin-top: 16px; color: var(--notebook-ink); font-size: 17px; }
+.notebook-profile-link { margin-top: 20px; }
+.notebook-home-index nav a { display: block; min-height: 44px; padding-block: 10px; color: var(--notebook-blue); }
+.notebook-home-index nav a:hover { text-decoration: underline; }
+.notebook-home-content > section { scroll-margin-top: 24px; }
+.notebook-home-content > section + section { margin-top: 64px; }
+.notebook-feature-projects { border-top: 1px solid var(--notebook-ink); }
+.notebook-feature-record { padding-block: 28px; }
+.notebook-feature-record h3 { margin-bottom: 14px; font-size: 25px; font-weight: 550; line-height: 1.2; letter-spacing: -.025em; }
+.notebook-project-media { position: relative; width: 100%; max-width: 240px; aspect-ratio: 16 / 10; margin-top: 20px; }
+.notebook-project-paper { aspect-ratio: 634 / 814; max-width: 180px; }
+.notebook-project-chess { display: block; max-width: 180px; aspect-ratio: 986 / 873; }
+.notebook-project-chess img { border: 1px solid var(--notebook-rule); border-radius: 4px; }
+.notebook-project-image { object-fit: contain; object-position: left top; }
+.notebook-project-link { margin-top: 20px; }
+.notebook-skills { border-top: 1px solid var(--notebook-ink); }
+.notebook-skill-group { display: grid; grid-template-columns: minmax(160px, 240px) minmax(0, 1fr); gap: 24px; padding: 24px 16px; border-bottom: 1px solid var(--notebook-rule); }
+.notebook-skill-group dt { font-size: 20px; font-weight: 500; line-height: 1.35; }
+.notebook-skill-group ul { display: flex; flex-wrap: wrap; gap: 8px; }
+.notebook-home-footer { margin-top: 48px; border-top: 1px solid var(--notebook-rule); }
+.notebook-home-footer p { margin-top: 16px; }
+.notebook-period-list { border-top: 1px solid var(--notebook-rule); }
+.notebook-period-hint { margin-bottom: 16px; color: var(--notebook-blue); font-size: 15px; }
+.notebook-period { border-bottom: 1px solid var(--notebook-rule); }
+.notebook-period > summary { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-block: 14px; }
+.notebook-period-title { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.notebook-period-title strong { font-size: 17px; font-weight: 550; }
+.notebook-period-count { display: flex; align-items: center; gap: 8px; color: var(--notebook-blue); font-size: 14px; }
+.notebook-period .education-chevron { display: inline-flex; width: 16px; height: 16px; transition: transform 180ms ease-out; }
+.notebook-subjects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 24px; padding: 4px 0 20px; font-size: 15px; line-height: 1.5; }
+.notebook-subjects li { padding-left: 12px; border-left: 1px solid var(--notebook-rule); }
+@media (max-width: 1199px) {
+  .notebook-skill-group { grid-template-columns: minmax(140px, 200px) minmax(0, 1fr); gap: 20px; }
+}
+@media (max-width: 899px) {
+  .notebook-profile { padding-bottom: 28px; }
+  .notebook-home-index nav ul { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+  .notebook-home-index nav a { padding-block: 8px; }
+}
+@media (max-width: 599px) {
+  .notebook-home-content > section + section { margin-top: 44px; }
+  .notebook-profile .notebook-profile-bio { font-size: 16px; }
+  .notebook-feature-record h3 { font-size: 24px; }
+  .notebook-project-media { max-width: 100%; max-height: 220px; margin-top: 16px; }
+  .notebook-project-paper { max-width: 140px; max-height: none; }
+  .notebook-project-chess { max-width: 180px; max-height: none; }
+  .notebook-skill-group { grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 20px 10px; }
+  .notebook-subjects { grid-template-columns: minmax(0, 1fr); }
+}

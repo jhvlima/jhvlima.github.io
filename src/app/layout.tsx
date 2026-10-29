@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Karla } from "next/font/google";
 import "./globals.css";
+import "./notebook.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import Navbar from "@/components/NavBar";
 import SkipLink from "@/components/SkipLink";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const karla = Karla({
+  variable: "--font-karla",
   subsets: ["latin"],
 });
 
@@ -56,14 +57,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
-      <body className={`${geistSans.variable} antialiased`}>
+      <body className={`${karla.variable} antialiased`}>
         <LanguageProvider>
           <SkipLink />
           <Navbar />
           <main
             id="main-content"
             tabIndex={-1}
-            className="scroll-mt-20 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600"
+            className="notebook-main"
           >
             {children}
           </main>

@@ -1,73 +1,49 @@
 "use client";
-import { useLanguage } from '@/context/LanguageContext';
-import { Project } from '@/data/projects';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useLanguage } from '@/context/LanguageContext';
+import type { Project } from '@/data/projects';
+import ArrowIcon from './ui/ArrowIcon';
+
+const tones: Record<string, string> = {
+  ic: 'notebook-tone-ai',
+  ct: 'notebook-tone-automation',
+  gamelab: 'notebook-tone-skills',
+  botchess: 'notebook-tone-ai',
+  'ct-booking': 'notebook-tone-automation',
+  mini_projects: 'notebook-tone-web',
+};
 
 export default function ProjectCard({ project }: { project: Project }) {
   const { t } = useLanguage();
-
-  const linkTitleKey = project.linkTitleKey ?? 'btn_view_more';
-  const isInternalLink = project.link?.startsWith('/') ?? false;
-  const linkClassName = "mt-4 inline-block rounded text-sm font-semibold text-blue-700 transition-colors hover:text-blue-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600";
+  const internal = project.link?.startsWith('/') ?? false;
+  const titleId = `feature-${project.id}-title`;
+  const label = t(project.linkTitleKey ?? 'btn_view_more');
 
   return (
-    <article className="mb-6 flex flex-col gap-6 rounded-r-lg border-l-4 border-blue-500 bg-white p-6 shadow-sm transition-shadow hover:shadow-md md:flex-row">
-      {project.image && (
-        <div className="relative w-full h-56 md:h-auto md:w-1/3 shrink-0 bg-gray-50/50 rounded-md">
-          <Image
-            src={project.image}
-            alt=""
-            fill
-            loading="lazy"
-            sizes="(max-width: 767px) calc(100vw - 72px), 280px"
-            className="rounded-sm object-contain object-center p-2 transition-all"
-          />
-        </div>
-      )}
-      <div className="flex-1">
-        <h3 className="text-xl font-bold text-gray-800 m-0">{t(project.titleKey)}</h3>
-
-      {project.statusKey && (
-        <span className="my-2 inline-block rounded-full bg-orange-700 px-3 py-1 text-xs font-medium text-white">
-          {t(project.statusKey)}
-        </span>
-      )}
-
-      <p className="text-gray-600 mt-2 font-light leading-relaxed">
-        {t(project.descKey)}
-      </p>
-
-      <ul className="mt-4 flex flex-wrap gap-2" aria-label={t('project_technologies_label')}>
-        {project.tags.map((tag, index) => (
-          <li key={tag.key ?? tag.text ?? index} className="rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
-            {tag.key ? t(tag.key) : tag.text}
-          </li>
+    <article aria-labelledby={titleId} className="notebook-record notebook-feature-record">
+      <div className="notebook-record-heading">
+        <h3 id={titleId}>{t(project.titleKey)}</h3>
+        {project.statusKey && <span className="notebook-status">{t(project.statusKey)}</span>}
+        {project.image && (project.id === 'botchess' ? (
+          <a href={project.image} target="_blank" rel="noopener noreferrer" className="notebook-project-media notebook-project-chess" aria-label={`${t('project_screenshot_open')}: ${t('mini_chess_screenshot_alt')} (${t('opens_new_tab')})`}>
+            <Image src={project.image} alt={t('mini_chess_screenshot_alt')} fill loading="lazy" sizes="(max-width: 599px) 180px, 240px" className="notebook-project-image" />
+          </a>
+        ) : (
+          <div className={`notebook-project-media ${project.id === 'ic' ? 'notebook-project-paper' : ''}`}>
+            <Image src={project.image} alt="" fill loading="lazy" sizes="(max-width: 599px) calc(100vw - 60px), 240px" className="notebook-project-image" />
+          </div>
         ))}
-      </ul>
-
-      {project.link && isInternalLink && (
-        <Link
-          href={project.link}
-          className={linkClassName}
-          title={t(linkTitleKey)}
-        >
-          👉 {t(linkTitleKey)}
-        </Link>
-      )}
-
-      {project.link && !isInternalLink && (
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={linkClassName}
-          title={t(linkTitleKey)}
-        >
-          🔗 {t(linkTitleKey)}
-          <span className="sr-only"> ({t('opens_new_tab')})</span>
-        </a>
-      )}
+      </div>
+      <div className="notebook-record-body">
+        <p className="notebook-description">{t(project.descKey)}</p>
+        <ul className="notebook-topics" aria-label={t('project_technologies_label')}>
+          {project.tags.map((tag,index) => <li key={tag.key ?? tag.text ?? index}><span className={`notebook-topic ${tones[project.id] ?? 'notebook-tone-neutral'}`}>{tag.key ? t(tag.key) : tag.text}</span></li>)}
+        </ul>
+        {project.link && (internal
+          ? <Link href={project.link} className="notebook-text-link notebook-project-link">{label}<ArrowIcon /></Link>
+          : <a href={project.link} target="_blank" rel="noopener noreferrer" className="notebook-text-link notebook-project-link">{label}<ArrowIcon external /><span className="sr-only"> ({t('opens_new_tab')})</span></a>
+        )}
       </div>
     </article>
   );

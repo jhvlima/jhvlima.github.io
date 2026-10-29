@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Vitrine de Projetos",
+  title: "Hub de Projetos",
   description:
     "Projetos concluídos e experimentos de João Henrique Lima em Machine Learning, automação, lógica e desenvolvimento de software.",
   alternates: {
-    canonical: "/vitrine/",
+    canonical: "/hub/",
   },
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "/vitrine/",
+    url: "/hub/",
     siteName: "Portfólio de João Henrique Lima",
-    title: "Vitrine de Projetos | João Henrique Lima",
+    title: "Hub de Projetos | João Henrique Lima",
     description:
       "Projetos concluídos e experimentos em Machine Learning, automação, lógica e desenvolvimento de software.",
     images: [
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Vitrine de Projetos | João Henrique Lima",
+    title: "Hub de Projetos | João Henrique Lima",
     description:
       "Projetos concluídos e experimentos em Machine Learning, automação, lógica e desenvolvimento de software.",
     images: ["/images/profile.png"],
   },
 };
 
-export default function VitrineLayout({
+export default function HubLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

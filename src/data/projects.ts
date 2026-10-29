@@ -57,6 +57,32 @@ export const projectsData: Project[] = [
     linkTitleKey: "project3_link_title"
   },
   {
+    id: "botchess",
+    titleKey: "mini_chess_title",
+    descKey: "mini_chess_desc",
+    image: "/images/projects/botchess-interface.png",
+    tags: [
+      { text: "Python" },
+      { text: "Machine Learning" },
+      { text: "Flask" },
+      { text: "UCI" }
+    ],
+    link: "https://github.com/jhvlima/botChess",
+    linkTitleKey: "btn_view_code"
+  },
+  {
+    id: "ct-booking",
+    titleKey: "mini_ct_booking_title",
+    descKey: "mini_ct_booking_desc",
+    tags: [
+      { text: "n8n" },
+      { text: "WhatsApp API" },
+      { text: "React" },
+      { text: "TypeScript" },
+      { text: "Supabase" }
+    ]
+  },
+  {
     id: "mini_projects",
     titleKey: "project4_title",
     descKey: "project4_desc",
@@ -66,7 +92,7 @@ export const projectsData: Project[] = [
       { text: "Linux" },
       { text: "GitHub" },
     ],
-    link: "/vitrine/",
+    link: "/hub/",
     linkTitleKey: "project4_link_title"
   }
 ];
