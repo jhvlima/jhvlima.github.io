@@ -67,7 +67,6 @@ export const miniProjectsData: MiniProject[] = [
     approach: "agent-monitoring",
     visibility: "private",
     techStack: ["React", "TypeScript", "Supabase", "n8n", "WhatsApp API"],
-    screenshots: [{ src: "/images/projects/kamiagents-demo.png", altKey: "mini_kamiagents_image_alt", captionKey: "mini_kamiagents_image_caption", width: 1440, height: 900 }],
   },
   {
     id: "n8n-workflows",
