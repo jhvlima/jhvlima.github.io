@@ -126,6 +126,15 @@ export const miniProjectsData: MiniProject[] = [
     repoLink: "https://github.com/jhvlima/botVendas"
   },
   {
+    id: "jhvlima-skills",
+    titleKey: "mini_agent_skills_title",
+    descriptionKey: "mini_agent_skills_desc",
+    focuses: ["skills-prompts"],
+    visibility: "public",
+    techStack: ["Agent Skills", "Markdown", "Python", "Bash", "Git"],
+    repoLink: "https://github.com/jhvlima/jhvlima-skills",
+  },
+  {
     id: "terminal-games",
     titleKey: "mini_terminal_games_title",
     descriptionKey: "mini_terminal_games_desc",

@@ -43,6 +43,8 @@ const checks = [
       "n8n-workflows",
       "https://github.com/jhvlima/botChess",
       "https://github.com/jhvlima/n8n-workflows",
+      "https://github.com/jhvlima/jhvlima-skills",
+      "Skills pessoais para agentes de IA",
     ],
     excludes: [
       ">Loading...",
